@@ -1,40 +1,25 @@
-# Phase 5: Reminders and Garbage Collection
-
+### Phase 5: User Authentication (0.5 days)
 ## Rails
 ### Models
-* Reminder
+* User
 
 ### Controllers
-* Api::RemindersController (create, destroy, index, show, update)
+* UsersController (create, new)
+* SessionsController (create, new, destroy)
+
 
 ### Views
-* reminders/index.json.jbuilder
+* users/new.html.erb
+* session/new.html.erb
 
 ## Flux
 ### Views (React Components)
-* RemindersIndex
-  - ReminderIndexItem
-* ReminderShow
-* ReminderForm
 
 ### Stores
-* Reminder
 
 ### Actions
-* ApiActions.receiveAllReminders -> triggered by ApiUtil
-* ApiActions.receiveSingleReminder
-* ApiActions.deleteReminder
-* ReminderActions.fetchAllReminders -> triggers ApiUtil
-* ReminderActions.fetchSingleReminder
-* ReminderActions.createReminder
-* ReminderActions.updateReminder
-* ReminderActions.destroyReminder
 
 ### ApiUtil
-* ApiUtil.fetchAllReminders
-* ApiUtil.fetchSingleReminder
-* ApiUtil.createReminder
-* ApiUtil.updateReminder
-* ApiUtil.destroyReminder
 
 ## Gems/Libraries
+* BCrypt (Gem)

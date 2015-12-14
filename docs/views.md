@@ -6,21 +6,29 @@
 ## New Session
 ![new-session]
 
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
+## Transactions History Index / Transaction List Item
+![transactionhistory]
 
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
+## Add a Bill Form
+![billform]
 
-## NoteBookForm
-![notebook-form]
+## Split Options Form
+![splitoptions]
+
+## Upload image / Add Notes Form
+![uploadform]
+
+## Choose a Group Form
+![groupform]
 
 ## Component Heirarchy
 ![component-heirarchy]
 
-[new-user]: ./wireframes/new_user.png
-[new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+[new-user]: ./wireframes/Sign_up!.png
+[new-session]: ./wireframes/Sign_in!.png
+[transactionhistory]: ./wireframes/transactions_index.png
+[billform]: ./wireframes/add_a_bill_form.png
+[splitoptions]: ./wireframes/split_option_form.png
+[uploadform]: ./wireframes/upload_image_add_notes_form.png
+[groupform]: ./wireframes/choose_group_form.png
 [component-heirarchy]: ./wireframes/component_heirarchy.png

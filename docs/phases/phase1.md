@@ -1,29 +1,38 @@
-# Phase 1: User Authentication, Note Model and JSON API
+# Phase 1: Flux Architecture and Transaction Event CRUD (1 day)
 
 ## Rails
 ### Models
 * User
-* Note
+* Transaction Events
 
 ### Controllers
-* UsersController (create, new)
-* SessionsController (create, new, destroy)
-* Api::NotesController (create, destroy, index, show, update)
+* UsersController
+* Api::TransactionEventsController (create, destroy, index, show, update)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* notes/index.json.jbuilder
-* notes/show.json.jbuilder
-
-## Flux
-### Views (React Components)
-
-### Stores
+* transaction_events/index.json.jbuilder
+(- React Views)
+* transactionEventIndex
+* transactionEventItem
+* addBillForm
+* transactionHeader
 
 ### Actions
+* ApiActions.receiveAllTransactionEvents -> triggered by ApiUtil
+* ApiActions.receiveSingleTransactionEvent
+* ApiActions.deleteTransactionEvent
+* NoteActions.fetchAllTransactionEvents -> triggers ApiUtil
+* NoteActions.fetchSingleTransactionEvent
+* NoteActions.createTransactionEvent
+* NoteActions.editTransactionEvent
+* NoteActions.destroyTransactionEvent
 
 ### ApiUtil
+* ApiUtil.fetchAllTransactionEvents
+* ApiUtil.fetchSingleTransactionEvent
+* ApiUtil.createTransactionEvent
+* ApiUtil.editTransactionEvent
+* ApiUtil.destroyTransactionEvent
 
 ## Gems/Libraries
-* BCrypt (Gem)
+* Flux Dispatcher (npm)

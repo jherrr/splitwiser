@@ -1,44 +1,26 @@
-# Phase 3: Notebooks and Tags (2 days)
-
+### Phase 3: Build out Settle Up Functionality, Uploaded Image and Add Notes Functionality (1 day)
 ## Rails
 ### Models
-* Notebook
-* Tag
-* Tagging
 
 ### Controllers
-* Api::NotebooksController (create, destroy, index, show, update)
 
 ### Views
-* notebooks/index.json.jbuilder
-* notebooks/show.json.jbuilder
-* tags/show.json.jbuilder
-
-## Flux
-### Views (React Components)
-* NotebooksIndex
-  - NotebookIndexItem
-* NotebookForm
-* SearchIndex
-
-### Stores
-* Notebook
+* transaction/index.json.jbuilder
+( - React Components)
+* settleUpForm
+* transactionIndex
+* transactionItems
 
 ### Actions
-* ApiActions.receiveAllNotebooks -> triggered by ApiUtil
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
-* NotebookActions.fetchAllNotebooks -> triggers ApiUtil
-* NotebookActions.fetchSingleNotebook
-* NotebookActions.createNotebook
-* NotebookActions.editNotebook
-* NotebookActions.destroyNotebook
+* ApiActions.receiveAllTransaction -> triggered by ApiUtil
+* ApiActions.deleteTransaction
+* NoteActions.fetchAllTransaction -> triggers ApiUtil
+* NoteActions.createTransaction
+* NoteActions.editTransaction
+* NoteActions.destroyTransaction
 
 ### ApiUtil
-* ApiUtil.fetchAllNotebooks
-* ApiUtil.fetchSingleNotebook
-* ApiUtil.createNotebook
-* ApiUtil.editNotebook
-* ApiUtil.destroyNotebook
-
-## Gems/Libraries
+* ApiUtil.fetchAllTransaction
+* ApiUtil.createTransaction
+* ApiUtil.editTransaction
+* ApiUtil.destroyTransaction
