@@ -1,1 +1,7 @@
 .DS_Store
+
+#node directory
+/node_modules
+
+#bundle
+bundle.js
