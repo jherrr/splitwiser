@@ -5,7 +5,11 @@ var TransactionStore = new Store(AppDispatcher);
 var TransactionConstants = ('../constants/transaction_constants');
 
 TransactionStore.all = function () {
-  return _transactions.slice(0);
+  return _transactions.map( function(_transaction) {
+    _transaction.objType = "transaction"
+    return _transaction;
+  });
+  // return _transactions.slice(0);
 };
 
 var resetTransactions = function(transactions) {

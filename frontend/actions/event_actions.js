@@ -5,7 +5,7 @@ var EventActions = {
   receiveAllEvents: function (events) {
     Dispatcher.dispatch({
       actionType: EventConstants.EVENTS_RECEIVED,
-      transactions: events
+      events: events
     })
   }
 }

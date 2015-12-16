@@ -8,20 +8,14 @@ var IndexRoute = ReactRouter.IndexRoute;
 
 var ApiUtil = require('./util/api_util');
 var TransactionStore = require('./stores/transaction');
+var App = require('./components/app');
 
 var TransactionIndex = require('./components/transaction_index');
+var _calculateBalance = function (events, transactions) {
 
-var App = React.createClass({
-  render: function(){
-    return (
-      <div id="app">
-        <header><h1>SplitWiser</h1></header>
-        <TransactionIndex />
-        {this.props.children}
-      </div>
-    );
-  }
-});
+
+
+};
 
 var routes = (
   <Route path="/" component={App}>

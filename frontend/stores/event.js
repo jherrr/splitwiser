@@ -2,10 +2,14 @@ var Store = require('flux/utils').Store;
 var AppDispatcher = require('../dispatcher/dispatcher');
 var _events = [];
 var EventStore = new Store(AppDispatcher);
-var EventConstants = ('../constants/event_constants');
+var EventConstants = require('../constants/event_constants');
 
 EventStore.all = function () {
-  return _events.slice(0);
+  return _events.map( function(_event) {
+    _event.objType = "event"
+    return _event;
+  });
+  // return _events.slice(0);
 };
 
 var resetEvents = function(events) {

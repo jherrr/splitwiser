@@ -25,11 +25,9 @@ function _mergeTransactionsEvents() {
     var eventDate = new Date(_event);
 
     if ( transactionDate.getTime() >= eventDate.getTime() ) {
-      transaction.objType = "transaction";
       mergedOutput.push(transaction);
     } else if (transactionDate.getTime < eventDate.getTime() ) {
-      _event.objType = "event";
-      mregedOutput.push(_event);
+      mergedOutput.push(_event);
     }
   }
 
@@ -39,10 +37,10 @@ function _mergeTransactionsEvents() {
 
 var TransactionIndex = React.createClass({
   _transactionsChanged: function() {
-    this.setState({transactions: _mergeTransactionsEvents()});
+    this.setState({listItems: _mergeTransactionsEvents()});
   },
   _eventsChanged: function() {
-    this.setState({transactions: _mergeTransactionsEvents()});
+    this.setState({listItems: _mergeTransactionsEvents()});
   },
   getInitialState: function() {
     return {listItems: _mergeTransactionsEvents()};
