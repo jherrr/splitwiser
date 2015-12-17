@@ -8,6 +8,6 @@ var EventActions = {
       events: events
     })
   }
-}
+};
 
 module.exports = EventActions;

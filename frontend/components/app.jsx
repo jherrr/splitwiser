@@ -4,13 +4,7 @@ var TransactionIndex = require('./transaction_index');
 
 var EventStore = require('../stores/event');
 var TransactionStore = require('../stores/transaction');
-
-var _money_you_owe_data = {total: };
-var _money_owed_you_data = {total: };
-
-var _calculateBalance = function(events) {
-
-}
+var EventSplitStore = require('../stores/event_split');
 
 var App = React.createClass({
   render: function(){
