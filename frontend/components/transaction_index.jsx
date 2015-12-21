@@ -3,7 +3,11 @@ var React = require('react');
 var EventStore = require('../stores/event');
 var TransactionStore = require('../stores/transaction');
 var ApiUtil = require('../util/api_util');
+
+var BalanceBook = require('./balance_book');
 var EventItemIndex = require('./event_index_item');
+
+var AppConstants = require('../constants/app_constants');
 
 function _getAllTransactions() {
   return TransactionStore.all();
@@ -11,6 +15,9 @@ function _getAllTransactions() {
 
 function _getAllEvents() {
   return EventStore.all();
+}
+
+function _getAllEventSplits() {
 }
 
 function _mergeTransactionsEvents() {
@@ -37,7 +44,7 @@ function _mergeTransactionsEvents() {
 
 var TransactionIndex = React.createClass({
   _transactionsChanged: function() {
-    this.setState({listItems: _mergeTransactionsEvents()});
+    this.setState({listItems: _mergeTransactionsEvents(), viewType: ""});
   },
   _eventsChanged: function() {
     this.setState({listItems: _mergeTransactionsEvents()});
@@ -46,6 +53,13 @@ var TransactionIndex = React.createClass({
     return {listItems: _mergeTransactionsEvents()};
   },
   componentDidMount: function() {
+    this.setState({viewType: this.props.viewType});
+
+    if(this.state.viewType === AppConstants.DASHBOARD) {
+
+
+    }
+
     this.transactionListener = TransactionStore.addListener(this._transactionsChanged);
     this.eventListener = EventStore.addListener(this._eventsChanged)
     ApiUtil.fetchTransactions();
@@ -62,8 +76,11 @@ var TransactionIndex = React.createClass({
       }
     });
     return(
-      <div id="transIndex">
-        {listItems}
+      <div id="transaction-index">
+        <BalanceBook />
+        <div id="list-items">
+          {listItems}
+        </div>
       </div>
     );
   }

@@ -6,4 +6,7 @@ class Event < ActiveRecord::Base
     foreign_key: :lender_id,
     primary_key: :id,
     class_name: "User")
+
+  has_many :event_splits
+
 end

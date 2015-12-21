@@ -25,6 +25,6 @@ TransactionStore.__onDispatch = function (payload) {
   }
 }
 
-window.TransactionStore = TransactionStore;
+
 
 module.exports = TransactionStore;

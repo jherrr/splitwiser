@@ -10,7 +10,8 @@ Users = User.create([{id: 1, username: 'Jeff', password: 'password', email: 'jef
                     {id: 2, username: 'Collin', password: 'password', email: 'collinchen@gmail.com'},
                     {id: 3, username: 'Byron', password: 'password', email: 'byronsha@gmail.com'},
                     {id: 4, username: 'Mack', password: 'password', email: 'macksiu@gmail.com'},
-                    {id: 5, username: 'Hank', password: 'password', email: 'hankfanchiu@gmail.com'}])
+                    {id: 5, username: 'Hank', password: 'password', email: 'hankfanchiu@gmail.com'},
+                    {id: 6, username: 'Jeff2', password: 'password', email: 'jeffher@gmail.com'}])
 
 Events = Event.create([{id: 1, lender_id: 1, item: "kbbq", description: "Some kbbq place", dollar_amt: 7000, split_type: "equally"},
                       {id: 2, lender_id: 1, item: "tofu house", description: "Some tofuhouse place", dollar_amt: 6000, split_type: "equally"},

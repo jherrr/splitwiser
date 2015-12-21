@@ -1,61 +1,47 @@
-var EventStore = require('../stores/event');
-var TransactionStore = require('../stores/transaction');
-var EventSplitStore = require('../stores/event_split');
+var React = require('react');
+
+var CurrentUserStore = require('../stores/current_user');
+var UserStore = require('../stores/user');
 
 var ApiUtil = require('../util/api_util');
 
 var BalanceBook = React.createClass({
-    _eventsYouSponsoredSplits: function(eventSplits) {
-      var output = [];
-      eventSplits.each( function(eventSplit) {
-        if ( eventSplit.event.event_owner === window.user_id ) {
-          output.push( eventSplit );
-        }
-      });
-
-      return output;
-    },
-    _calculateBalance: function(theirSplits, yourSplits) {
-      var money_you_owe = 0;
-
-      theirSplits.forEach( function(split) {
-        money_you_owe += split.dollar_amt;
-      });
-
-      var money_owed_you = 0;
-
-      yourSplits.forEach( function(split) {
-        money_owed_you += split.dollar_amt;
-      });
-
-      var balance = money_owed_you - money_you_owe;
-
-      return {balance: balance, money_you_owe: money_you_owe, money_owed_you: money_owed_you};
-    },
-
-//everything below check it
-
-  _splitsChanged: function () {
-    var eventsYouParticipatedSplits = EventSplitStore.userAll();
-    var eventsYouSponsoredSplits = _eventsYouSponsoredSplits(EventSplitStore.all());
-
-    var balance = calculateBalance(eventsYouParticipatedSplits, eventsYouSponsoredSplits);
-    this.setState({balance: balance});
+  _currentUserChanged: function( ) {
+    this.setState(CurrentUserStore.all());
   },
   getInitialState: function () {
-    return {balance: 0, money_you_owe: 0, money_owed_you: 0};
+    return {balance: 0, lended_amount: 0, owed_amount: 0};
   },
   componentDidMount: function () {
-    this.splitListener = EventSplitStore.addListener(this._splitsChanged());
-    ApiUtil.fetchUserSplits(window.user_id);
+    this.currentUserListener = CurrentUserStore.addListener(this._currentUserChanged);
+    ApiUtil.fetchCurrentUserOwedAmount(window.user_id)
+    ApiUtil.fetchCurrentUserLendedAmount(window.user_id)
   },
   componentWillUnmount: function() {
     this.splitListener.remove();
   },
   render: function () {
+    var owed_amt = (this.state.owed_amount/parseFloat(100)).toFixed(2);
+    var lended_amt = (this.state.lended_amount/parseFloat(100)).toFixed(2);
+    var balance = (lended_amt - owed_amt).toFixed(2);
 
-    return {};
+    return (
+      <div id="balance-book">
+        <div className="balance-book-item">
+          Balance:
+          ${balance}
+        </div>
+        <div className="balance-book-item">
+          Lended Amount:
+          ${lended_amt}
+        </div>
+        <div className="balance-book-item">
+          Owed Amount:
+          ${owed_amt}
+        </div>
+      </div>
+    );
   }
 });
 
-module.exports = Balance;
+module.exports = BalanceBook;

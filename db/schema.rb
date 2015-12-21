@@ -11,17 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216194412) do
+ActiveRecord::Schema.define(version: 20151217194435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "event_splits", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "dollar_amt", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "event_id",   null: false
+    t.integer  "user_id",                     null: false
+    t.integer  "dollar_amt",                  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "event_id",                    null: false
+    t.integer  "amt_settled", default: 0,     null: false
+    t.boolean  "settled",     default: false, null: false
   end
 
   add_index "event_splits", ["user_id"], name: "index_event_splits_on_user_id", using: :btree

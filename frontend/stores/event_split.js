@@ -36,6 +36,6 @@ EventSplitStore.__onDispatch = function (payload) {
   }
 }
 
-window.EventSplitStore = EventSplitStore;
+
 
 module.exports = EventSplitStore;

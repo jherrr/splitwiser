@@ -25,6 +25,6 @@ EventStore.__onDispatch = function (payload) {
   }
 }
 
-window.EventStore = EventStore;
+
 
 module.exports = EventStore;

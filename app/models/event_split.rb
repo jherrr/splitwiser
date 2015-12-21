@@ -1,6 +1,10 @@
 class EventSplit < ActiveRecord::Base
   validates :user_id, :dollar_amt, :event_id, presence: true
 
+  has_one :lender,
+    through: :event,
+    source: :lender
+
   belongs_to :user,
     primary_key: :id,
     foreign_key: :user_id,

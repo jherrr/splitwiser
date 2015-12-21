@@ -258,3 +258,74 @@ LINE 1: SELECT "users".* FROM "users" WHERE "users"."user_id" IN ('1...
 LINE 1: SELECT  "events".* FROM "events" WHERE "events"."event_id" =...
                                                ^
 : SELECT  "events".* FROM "events" WHERE "events"."event_id" = $1 LIMIT 1
+[2015-12-17 13:55:36 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `cats_url' for #<UsersController:0x007fcd153422d8>
+[2015-12-17 13:57:27 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `root' for #<UsersController:0x007fcd166a8390>
+[2015-12-17 14:11:25 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for nil:NilClass
+[2015-12-17 14:11:29 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for nil:NilClass
+[2015-12-17 14:11:42 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for nil:NilClass
+[2015-12-17 14:11:58 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for nil:NilClass
+[2015-12-17 14:22:19 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial users/_user with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-17 16:51:16 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/config/routes.rb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+    get 'owed_amount/:id', to "event_splits#owed_amount"
+                               ^
+[2015-12-17 16:52:03 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/event_splits_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+    render :json {owed_amount: @owed_amount}
+                  ^
+[2015-12-17 16:52:26 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/event_splits_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+    render :json {owed_amount: @owed_amount}
+                  ^
+[2015-12-17 16:52:28 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/event_splits_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+    render :json {owed_amount: @owed_amount}
+                  ^
+[2015-12-17 16:53:03 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/event_splits_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+    render :json {owed_amount: @owed_amount}
+                  ^
+[2015-12-17 16:54:05 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/event_splits_controller.rb:24: syntax error, unexpected '{', expecting keyword_end
+    render :json {owed_amount: @owed_amount}
+                  ^
+[2015-12-17 22:41:58 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for {4=>3000, 1=>13000, 3=>10000, 2=>5000}:Hash
+[2015-12-18 09:25:03 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/events_controller.rb:34: syntax error, unexpected tCONSTANT, expecting keyword_end
+    @event_splits Event_Split.all
+                             ^
+[2015-12-18 09:25:25 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/events_controller.rb:34: syntax error, unexpected tCONSTANT, expecting keyword_end
+    @event_splits Event_Split.all
+                             ^
+[2015-12-18 09:26:18 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unable to autoload constant Event_Split, expected /Users/Jher/Desktop/capstone_project/app/models/event_split.rb to define it
+[2015-12-18 09:26:38 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unable to autoload constant Event_Split, expected /Users/Jher/Desktop/capstone_project/app/models/event_split.rb to define it
+[2015-12-18 09:27:17 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/events/lended_amount_user, application/lended_amount_user with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-18 09:28:01 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/events/lended_amount_user, application/lended_amount_user with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-18 09:28:34 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/events/lended_amount_user, application/lended_amount_user with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-18 09:29:08 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/events/lended_amount_user, application/lended_amount_user with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-18 10:39:15 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Jher/Desktop/capstone_project/app/controllers/api/events_controller.rb:42: syntax error, unexpected '{', expecting keyword_do_cond or ';' or '\n'
+/Users/Jher/Desktop/capstone_project/app/controllers/api/events_controller.rb:47: syntax error, unexpected '{', expecting keyword_do_cond or ';' or '\n'
+/Users/Jher/Desktop/capstone_project/app/controllers/api/events_controller.rb:51: syntax error, unexpected '}', expecting keyword_end
+[2015-12-18 10:40:23 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: The action 'lended_amount_user' could not be found for Api::EventsController
+[2015-12-18 10:40:52 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `shift' for #<Event::ActiveRecord_Relation:0x007fcd160e1f10>
+[2015-12-18 10:42:00 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `shift' for #<Event::ActiveRecord_Relation:0x007fcd0cb04358>
+[2015-12-18 10:56:03 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `initial_event_id' for #<Api::EventsController:0x007fcd162de480>
+[2015-12-18 11:01:47 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `dollar_amt' for #<EventSplit::ActiveRecord_AssociationRelation:0x007fcd135c1330>
+[2015-12-18 11:03:01 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `dollar_amt' for nil:NilClass
+[2015-12-18 11:20:26 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:21:43 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:23:26 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:24:42 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:25:27 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:26:11 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:27:57 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `event_id' for nil:NilClass
+[2015-12-18 11:28:30 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/events/lended_amount, application/lended_amount with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jher/Desktop/capstone_project/app/views"
+
+[2015-12-18 11:55:51 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: ERROR:  column events.user_id does not exist
+LINE 1: ...t_id IN (SELECT "events"."id" FROM "events" WHERE "events"."...
+                                                             ^
+

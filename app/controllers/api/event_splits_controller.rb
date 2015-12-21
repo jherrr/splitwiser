@@ -11,8 +11,17 @@ class Api::EventSplitsController < ApplicationController
   end
 
   def show
-    @event_splits = EventSplit.where(user_id: params[:id])
+    user_id = params[:id]
+    @event_splits = EventSplit.where(user_id: user_id)
 
     render 'show'
   end
+
+  def owed_amount_current_user
+    user_id = params[:id]
+    @owed_amount = EventSplit.where(user_id: user_id).sum(:dollar_amt)
+
+    render json: {owed_amount: @owed_amount}
+  end
+
 end
