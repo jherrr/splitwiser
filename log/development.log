@@ -44629,3 +44629,2844 @@ Processing by Api::UserDataController#index as JSON
   Rendered api/user_data/_user.json.jbuilder (0.5ms)
   Rendered api/user_data/index.json.jbuilder (8.8ms)
 Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:05:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 526ms (Views: 524.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/bundle.self-f3b781de5be2e8024b6b3ffd9f6f6d6e8f1470646ae7b72100c6bf2df6c9db8e.js?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:05:55 -0800
+
+
+Started GET "/" for ::1 at 2015-12-21 12:06:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 360ms (Views: 359.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/bundle.self-c0663035367b1c910f0d75f07a134a2074a304dd6f85f18ab473cf02243eef9d.js?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:06:13 -0800
+
+
+Started GET "/" for ::1 at 2015-12-21 12:06:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 777ms (Views: 774.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/bundle.self-088cedab4aa9e59dd81e005a973165daba34b6741e8eb34e4923a744f6210a5b.js?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:06:54 -0800
+
+
+Started GET "/" for ::1 at 2015-12-21 12:07:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 392ms (Views: 390.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/bundle.self-9e6a9aa1d32e4f7b913b549926e03db0c70c6239a2cb2349edd1c5bcd17d07ec.js?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:07:06 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (11.6ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.7ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (3.8ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:07:06 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (7.3ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:38:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/bundle.self-9e6a9aa1d32e4f7b913b549926e03db0c70c6239a2cb2349edd1c5bcd17d07ec.js?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:38:41 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (11.8ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (1.5ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:38:41 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (9.4ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:38:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 465ms (Views: 462.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/bundle.self-1dbff5530e870409d36ff520f501aa041ab790cdf9728ee834fc383bb62d197d.js?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:38:59 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.9ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/index.json.jbuilder (16.2ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.9ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:38:59 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.7ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (10.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:40:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 686ms (Views: 684.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/bundle.self-20295929af6c845596935f1b58920d3e81b56468d01d60883e99f820a2a701e4.js?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:40:35 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.9ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.5ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:40:35 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/index.json.jbuilder (7.5ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/bundle.self-20295929af6c845596935f1b58920d3e81b56468d01d60883e99f820a2a701e4.js?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:40:44 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.6ms)
+  Rendered api/user_data/index.json.jbuilder (11.1ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.2ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:40:44 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (11.6ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:41:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 435ms (Views: 433.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/bundle.self-cd67e8ec4faab8eab879902c616ce70baeec31a0e440f4b0f1b83c706b800404.js?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:41:48 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (14.5ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.5ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.7ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:41:49 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (6.7ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:42:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 410ms (Views: 408.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/bundle.self-5fec68df9d0bce1d0aedf0ef1ee76bede4643c8156b667e3f82c9220612a8c4b.js?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:42:53 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:42:53 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/index.json.jbuilder (22.0ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:42:53 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:42:53 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:42:54 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC
+  [1m[36mEventSplit Load (0.4ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:42:54 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.8ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:42:54 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (9.7ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:43:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 555ms (Views: 553.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/assets/bundle.self-a7516a8e9977395a7041853225ad7590aa9ff085495bfb7a4fdd92c0c985079c.js?body=1" for ::1 at 2015-12-21 12:43:11 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (12.6ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.8ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.7ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:43:11 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:43:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 437ms (Views: 436.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:43:46 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:43:47 -0800
+
+
+Started GET "/assets/bundle.self-6febf84cf98d5db43c5c6b1b43800eccded1141430347bdd752f558480eb5210.js?body=1" for ::1 at 2015-12-21 12:43:47 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:43:47 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:43:47 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:43:47 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.7ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (16.5ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:43:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (8.3ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:45:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 529ms (Views: 522.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/bundle.self-8a2327d7d3bd08665c157e2e547421fdb824ba09e7bcec8b82dfd4bc66182a9f.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/assets/bundle.self-8a2327d7d3bd08665c157e2e547421fdb824ba09e7bcec8b82dfd4bc66182a9f.js?body=1" for ::1 at 2015-12-21 12:45:32 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.7ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (24.8ms)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:45:33 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.3ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:45:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 707ms (Views: 705.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/bundle.self-297005680cf2a3e809f3a76ac0b57d1efd1a7afd3b70d478d0eee54360d69b95.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/assets/bundle.self-297005680cf2a3e809f3a76ac0b57d1efd1a7afd3b70d478d0eee54360d69b95.js?body=1" for ::1 at 2015-12-21 12:45:59 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (1.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/index.json.jbuilder (20.4ms)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.9ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:46:00 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:46:00 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.6ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (10.5ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:47:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/bundle.self-6febf84cf98d5db43c5c6b1b43800eccded1141430347bdd752f558480eb5210.js?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:47:34 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (9.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:47:34 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (7.3ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:48:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 481ms (Views: 479.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/bundle.self-32a1e71fe52566a02d56b950b0b28d4ff0c3eb6c6ae55291379effff84ca3931.js?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:48:17 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (10.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.8ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.9ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.5ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:48:17 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (7.4ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:50:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 622ms (Views: 616.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/bundle.self-9f021b1b8c4d112a962ad02076e85b3dcde51bd90a98323f0e03e0becc3ba79d.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/assets/bundle.self-9f021b1b8c4d112a962ad02076e85b3dcde51bd90a98323f0e03e0becc3ba79d.js?body=1" for ::1 at 2015-12-21 12:50:30 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (9.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/index.json.jbuilder (25.1ms)
+Completed 200 OK in 33ms (Views: 21.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.7ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:50:31 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:50:31 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.8ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:50:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 693ms (Views: 690.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/bundle.self-9a724f8bb048582710620f1262be143379b8c80bafe219f9c239e0fb2e044925.js?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:50:46 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (9.6ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (1.6ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.8ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:50:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (7.5ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:51:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 532ms (Views: 529.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/bundle.self-60e8290f76e25607473d8125331a18ddb7d23199a2068b7a0729f5b42618534c.js?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:51:47 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.5ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (1.7ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.5ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:51:47 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (8.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 12:52:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 518ms (Views: 516.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/bundle.self-5f8ecd186e01c2b354c58656868d4c3224214e7431a08f341a4b99f109a923df.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/assets/bundle.self-5f8ecd186e01c2b354c58656868d4c3224214e7431a08f341a4b99f109a923df.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/index.json.jbuilder (14.4ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC
+  [1m[36mEventSplit Load (0.3ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (2.2ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 12:52:34 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 12:52:34 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (8.5ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:06:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 1003ms (Views: 996.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:00 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/bundle.self-9ced72556bb1b7c0d02de7fa3acf8d88775542a9ea87d94dcbd38aa307c853a2.js?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/assets/bundle.self-9ced72556bb1b7c0d02de7fa3acf8d88775542a9ea87d94dcbd38aa307c853a2.js?body=1" for ::1 at 2015-12-21 13:07:01 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (16.4ms)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (1.9ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.6ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:07:12 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:07:12 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (8.9ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:07:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 538ms (Views: 537.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/bundle.self-13aad4ad0b19ab0869b8d6cb3793355394833a0f70d250dc443dda842fe2744a.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/assets/bundle.self-13aad4ad0b19ab0869b8d6cb3793355394833a0f70d250dc443dda842fe2744a.js?body=1" for ::1 at 2015-12-21 13:07:58 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:07:58 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (10.6ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:07:58 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:07:59 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.4ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:07:59 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:07:59 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:07:59 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (7.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:10:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 420ms (Views: 417.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:16 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:16 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:16 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:16 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:16 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/bundle.self-2e969b76115a20148c6e93a3809406bdaecd1dcb4ac3a4051c34bf48ca06f436.js?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:10:17 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (14.0ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (2.0ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (1.7ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.9ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC
+  [1m[36mEventSplit Load (0.5ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.9ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:10:17 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (7.7ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:10:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 888ms (Views: 878.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/bundle.self-5087df88cfb4f1d4b41d694a1543f9256a8bd4e96a599ea8d0e2a86bc0929c90.js?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:10:40 -0800
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (2.0ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (10.0ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.9ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:10:41 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (8.3ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:40:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 807ms (Views: 797.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/bundle.self-ff3cfdff6df117a600a07f78b5a80559b9e54686155e15610b8be3d73c136473.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/assets/bundle.self-ff3cfdff6df117a600a07f78b5a80559b9e54686155e15610b8be3d73c136473.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (5.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/_user.json.jbuilder (0.1ms)
+  Rendered api/user_data/index.json.jbuilder (16.1ms)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (1.0ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.1ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.3ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:40:58 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:40:58 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (9.2ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:41:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 422ms (Views: 421.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/bundle.self-62f57f65ff8dda6e9b23881c995ef4ddf62d800b747880aa5e614a1238feea06.js?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:41:18 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (14.2ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.8ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.8ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:41:19 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (10.2ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:42:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 716ms (Views: 714.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:42:45 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:42:46 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:42:46 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:42:46 -0800
+
+
+Started GET "/assets/bundle.self-a95ea3cfef8caedd641e04205aba656d771c41316a4837706660c6ca333666cd.js?body=1" for ::1 at 2015-12-21 13:42:46 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:42:46 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (13.3ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (2.8ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (1.1ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.5ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.4ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:42:46 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/index.json.jbuilder (9.6ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:44:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 532ms (Views: 523.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/bundle.self-a1e244aeb6012f65a57602153fb37dee8cf2b1dd00d2fd095f8052caf6f9731f.js?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/assets/bundle.self-a1e244aeb6012f65a57602153fb37dee8cf2b1dd00d2fd095f8052caf6f9731f.js?body=1" for ::1 at 2015-12-21 13:44:44 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/index.json.jbuilder (14.2ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.8ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (0.9ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC[0m
+  [1m[35mEventSplit Load (0.5ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:44:44 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.2ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (9.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-21 13:47:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w3mqZ2GcJ1asZ08jiDi9KQ"]]
+Completed 200 OK in 545ms (Views: 537.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/api/event_splits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/api/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/api/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/api/user_data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/application.self-85dcebd4cdcf123b03290c254d7acb3179634af92abcb319ca3dbdfc9e66b32e.css?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/bundle.self-b243501404ebd5e4bf6a65e63807a5ab4806174d72bea3477d258916a45accb9.js?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-21 13:47:42 -0800
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.8ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.4ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/index.json.jbuilder (21.2ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/owed_amount/1" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::EventSplitsController#owed_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."user_id" = $1  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/lended_amount/1" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::EventsController#lended_amount_current_user as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("events"."dollar_amt") FROM "events" WHERE "events"."lender_id" = $1[0m  [["lender_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."lender_id" = $1  [["lender_id", 1]]
+  [1m[36mEventSplit Load (0.7ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."event_id" IN (1, 2)[0m
+  [1m[35m (4.8ms)[0m  SELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("event_splits"."dollar_amt") FROM "event_splits" WHERE "event_splits"."event_id" = $1 AND (user_id NOT IN ('1'))[0m  [["event_id", 2]]
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/owed_amount_user/1" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::EventsController#owed_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (6.9ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."lender_id" ASC
+  [1m[36mEventSplit Load (0.5ms)[0m  [1mSELECT "event_splits".* FROM "event_splits" WHERE "event_splits"."user_id" = $1  ORDER BY "event_splits"."event_id" ASC[0m  [["user_id", 1]]
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/lended_amount_user/1" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::EventsController#lended_amount as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mEventSplit Load (1.0ms)[0m  SELECT "event_splits".* FROM "event_splits" WHERE (event_id IN (SELECT "events"."id" FROM "events" WHERE "events"."lender_id" = 1  ORDER BY "events"."lender_id" ASC))  ORDER BY "event_splits"."event_id" ASC
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/user_data" for ::1 at 2015-12-21 13:47:43 -0800
+Processing by Api::UserDataController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered api/user_data/_user.json.jbuilder (0.5ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (0.3ms)
+  Rendered api/user_data/_user.json.jbuilder (2.6ms)
+  Rendered api/user_data/_user.json.jbuilder (0.6ms)
+  Rendered api/user_data/_user.json.jbuilder (0.7ms)
+  Rendered api/user_data/index.json.jbuilder (16.3ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.6ms)

@@ -7,20 +7,15 @@ var AutoComplete = React.createClass({
   },
   handleInput: function (event) {
     var inputVal = event.currentTarget.value;
-    var users = this.matches();
+    var users = this.matches(inputVal);
 
-    debugger;
-    this.setState({ inputVal: event.currentTarget.value });
+    this.setState({ inputVal: inputVal, users: users });
   },
   addName: function ( event ) {
     if ( event.which === 13 ) {
-      debugger;
-      if ( this.state.users.length > 0 ) {
-        this.props.autoCallback(this.state.inputVal);
-        this.setState({inputVal: ""});
-      } else {
-        alert("Person doesn't exist");
-      }
+      var a = document.getElementById('search-bar-drop-down').focus();
+      // .focus();
+      // debugger;
     }
   },
   addNameSelected: function (e) {
@@ -30,15 +25,15 @@ var AutoComplete = React.createClass({
     this.props.autoCallback(username);
     this.setState({inputVal: ""});
   },
-  matches: function () {
+  matches: function ( inputVal ) {
     var matches = [];
-    if(this.state.inputVal.length === 0){
-      return this.state.users;
+    if(inputVal.length === 0){
+      return [];
     }
 
     this.props.users.forEach(function (user) {
-      var sub = user.username.slice(0, this.state.inputVal.length);
-      if(sub.toLowerCase() === this.state.inputVal.toLowerCase()){
+      var sub = user.username.slice(0, inputVal.length);
+      if(sub.toLowerCase() === inputVal.toLowerCase()){
         matches.push(user);
       }
     }.bind(this));
@@ -46,12 +41,12 @@ var AutoComplete = React.createClass({
     return matches;
   },
   display_matches: function () {
-    var results = this.matches();
+    var users = this.state.users;
     var intermediate;
     var display = "No matches";
 
-    if (results.length > 0) {
-      intermediate = results.map(function (result, i) {
+    if (users.length > 0) {
+      intermediate = users.map(function (result, i) {
           return <option key={i} data-userid={result.id} >{result.username} </ option> ;
           }.bind(this));
       intermediate.push(<option key={-1} disabled hidden value='' />);
@@ -76,7 +71,7 @@ var AutoComplete = React.createClass({
 
     return(
       <div>
-        <input onChange={this.handleInput} value={this.state.inputVal}
+        <input id="search-bar-drop-down" onChange={this.handleInput} value={this.state.inputVal}
           onKeyUp={ this.addName } />
         {
           display
