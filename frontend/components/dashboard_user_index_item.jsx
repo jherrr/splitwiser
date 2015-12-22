@@ -20,10 +20,12 @@ UserIndexListItem = React.createClass({
     }
 
     return(
-      <li onClick={this.showDetail} className="user-list-item">
-        <p>{this.props.user.username}</p>
-        <p>{output}</p>
-      </li>
+      <div className="row">
+        <li onClick={this.showDetail} className="col-md-4">
+          <p className="content">{this.props.user.username}</p>
+          <p className="content">{output}</p>
+        </li>
+      </div>
     );
   }
 });

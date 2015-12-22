@@ -9,7 +9,7 @@ var ChoosePayer = React.createClass({
       }
     });
 
-    return { users: this.props.users, selectedIdx: idx };
+    return { users: this.props.users, selectedIdx: selectedIdx };
   },
   handleClick: function () {
     debugger;

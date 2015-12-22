@@ -12,7 +12,10 @@ class SessionsController < ApplicationController
       render :new
     else
       login_user!(user)
-      redirect_to root_url
+      puts "root_url: "
+      puts root_url
+      puts "hi"
+      redirect_to (root_url + "#/dashboard")
     end
   end
 

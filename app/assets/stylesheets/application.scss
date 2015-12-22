@@ -126,3 +126,20 @@
   ul {
      list-style: none;
   }
+
+  html {
+    background: url("background.jpg") no-repeat center center fixed;
+    margin: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .content {
+    background-color: rgba(129, 190, 247, 0.5);
+  }
+
+  .button-colored {
+    background-color: rgb(129, 190, 247);
+  }

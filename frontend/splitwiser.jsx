@@ -26,7 +26,7 @@ var App = React.createClass({
   },
   render: function(){
     return (
-      <div id="app">
+      <div id="app" className="container">
         <header><h1>SplitWiser</h1></header>
         {this.props.children}
       </div>

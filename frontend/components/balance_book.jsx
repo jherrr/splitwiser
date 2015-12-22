@@ -26,18 +26,24 @@ var BalanceBook = React.createClass({
     var balance = (lended_amt - owed_amt).toFixed(2);
 
     return (
-      <div id="balance-book">
-        <div className="balance-book-item">
-          Balance:
-          ${balance}
+      <div id="balance-book" className="row">
+        <div className="col-md-2">
+          <p className="content">
+            Balance:
+            ${balance}
+          </p>
         </div>
-        <div className="balance-book-item">
-          Lended Amount:
-          ${lended_amt}
+        <div className="col-md-2">
+          <p className="content">
+            Lended Amount:
+            ${lended_amt}
+          </p>
         </div>
-        <div className="balance-book-item">
-          Owed Amount:
-          ${owed_amt}
+        <div className="col-md-2">
+          <p className="content">
+            Owed Amount:
+            ${owed_amt}
+          </p>
         </div>
       </div>
     );

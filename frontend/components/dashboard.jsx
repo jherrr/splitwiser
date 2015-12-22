@@ -16,7 +16,7 @@ var DashBoard = React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div id="dashboard">
         <AddABill />
         <BalanceBook user_id={window.user_id} />
         <UserIndex />

@@ -87,7 +87,7 @@ AddABill = React.createClass({
 
     return(
       <div id="add-a-bill">
-        <button onClick={this._openModal}>Add A Bill</button>
+        <button onClick={this._openModal} className="btn button-colored">Add A Bill</button>
         <section id="modal" className={modalClass}>
           <article className="modal-content">
             <span className="modal-close" onClick={this._closeModal}>&times;</span>
