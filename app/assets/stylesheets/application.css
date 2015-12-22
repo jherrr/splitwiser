@@ -80,3 +80,29 @@
    .modal-close:hover {
      color: black;
    }
+
+   .sub-modal {
+     display: none;
+   }
+
+   .sub-modal.is-active {
+     display: block;
+   }
+
+   #search-bar {
+     position: relative;
+   }
+
+   #search-bar-drop-down {
+     border: 1px solid #ccc;
+     position: absolute;
+     z-index: 1;
+   }
+
+   .search-bar-item {
+     border: 1px solid #ccc;
+   }
+
+  ul {
+     list-style: none;
+  }

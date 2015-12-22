@@ -5,6 +5,7 @@ var ApiUtil = require('../util/api_util');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var AutoComplete = require('./auto_complete');
+var ChoosePayer = require('./choose_payer');
 
 var UserStore = require('../stores/user');
 
@@ -19,16 +20,31 @@ AddABill = React.createClass({
   _usersChanged: function () {
     this.setState({users: UserStore.users()});
   },
-  _addUser: function (selectedUser) {
-    var users = this.state.participantNames
-    users.push(selectedUser);
-    this.setState({participantNames: users});
+  _addParticipant: function (selectedUser) {
+    var participants = this.state.participants;
+    participants.push(selectedUser);
+
+    //remove user from props to AutoComplete
+    var users = this.state.users;
+
+    for ( var x = 0; x < users.length; x++ ) {
+      if ( users[x].id === selectedUser.id ) {
+        users.splice(x, 1);
+        break;
+      }
+    }
+
+    this.setState({participants: participants, users: users});
+  },
+  _selectPayer: function () {
+
   },
   attrs: {
+    description: "",
     modalIsOpen: false,
     names: [],
     users: UserStore.users(),
-    participantNames: []
+    participants: []
   },
   getInitialState: function () {
     return this.attrs;
@@ -42,7 +58,7 @@ AddABill = React.createClass({
   },
   selectName: function(e) {
     debugger;
-    this.state.participantNames
+    this.state.participants
   },
   render: function () {
     var modalClass = 'modal';
@@ -53,8 +69,8 @@ AddABill = React.createClass({
     var listOfParticipants = (
       <ul>
         {
-          this.state.participantNames.map ( function( participantName ) {
-            return ( <li> {participantName} </li> );
+          this.state.participants.map ( function( participant ) {
+            return ( <li> {participant.username} </li> );
           })
         }
       </ul>
@@ -68,16 +84,22 @@ AddABill = React.createClass({
             <span className="modal-close" onClick={this._closeModal}>&times;</span>
             <button onClick={this._closeModal}>cancel</button>
 
-
-            <AutoComplete users={this.state.users} autoCallback={this._addUser} />
+            <AutoComplete users={this.state.users} autoCallback={this._addParticipant} />
             {listOfParticipants}
 
             <form className='new-bill' onSubmit={this.createBill}>
+
+              <label htmlFor='bill-event-description-type'>Description</label>
+              <input type='text' id='bill-event-description-type' valueLink={this.linkState("description")} />
+
+              <label htmlFor='bill-dollar-amt'>Bill Amount</label>
+              <input type='text' id='bill-dollar-amt' valueLink={this.linkState("description")} />
 
               <button>Save</button>
             </form>
 
           </article>
+          <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
           <div className="modal-screen" onClick={this._closeModal}></div>
         </section>
       </div>

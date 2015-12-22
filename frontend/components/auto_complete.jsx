@@ -2,8 +2,13 @@ var React = require('react');
 
 
 var AutoComplete = React.createClass({
+  _initialAttrs: {
+    inputVal: "",
+    users: [],
+    selectedItemIdx: 0
+  },
   getInitialState: function () {
-    return { inputVal: "", users: []};
+    return this._initialAttrs;
   },
   handleInput: function (event) {
     var inputVal = event.currentTarget.value;
@@ -11,19 +16,31 @@ var AutoComplete = React.createClass({
 
     this.setState({ inputVal: inputVal, users: users });
   },
-  addName: function ( event ) {
+  handleKey: function ( event ) {
     if ( event.which === 13 ) {
-      var a = document.getElementById('search-bar-drop-down').focus();
-      // .focus();
-      // debugger;
+      this.addNameSelected();
+
+    } else if ( event.which === 38 ) {
+      event.preventDefault();
+      var idx = this.state.selectedItemIdx;
+      if ( idx > 0 ) {
+        this.setState({selectedItemIdx: idx - 1});
+      }
+    } else if ( event.which === 40 ) {
+      event.preventDefault();
+      var idx = this.state.selectedItemIdx;
+
+      if ( idx < this.state.users.length - 1) {
+        this.setState({selectedItemIdx: idx + 1});
+      }
     }
+
   },
   addNameSelected: function (e) {
-    var username = e.currentTarget.value
-    var userid = e.currentTarget.selectedOptions[0].dataset.userid;
-    debugger;
-    this.props.autoCallback(username);
-    this.setState({inputVal: ""});
+    var output = this.state.users[this.state.selectedItemIdx];
+
+    this.props.autoCallback(output);
+    this.setState(this._initialAttrs);
   },
   matches: function ( inputVal ) {
     var matches = [];
@@ -47,16 +64,23 @@ var AutoComplete = React.createClass({
 
     if (users.length > 0) {
       intermediate = users.map(function (result, i) {
-          return <option key={i} data-userid={result.id} >{result.username} </ option> ;
+          var style = {};
+          if ( i === this.state.selectedItemIdx ) {
+            style = { background: "#ccc" }
+          }
+
+          return <li className="search-bar-item" key={i} data-userid={result.id}
+          style={style} >
+          {result.username} </ li> ;
           }.bind(this));
-      intermediate.push(<option key={-1} disabled hidden value='' />);
+
 
       display = (
-        <select defaultValue='' onChange={this.addNameSelected}>
+        <ul id="search-bar-drop-down">
           {
             intermediate
           }
-        </select>
+        </ ul>
       );
     }
 
@@ -71,8 +95,8 @@ var AutoComplete = React.createClass({
 
     return(
       <div>
-        <input id="search-bar-drop-down" onChange={this.handleInput} value={this.state.inputVal}
-          onKeyUp={ this.addName } />
+        <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
+          onKeyDown={ this.handleKey } />
         {
           display
         }
