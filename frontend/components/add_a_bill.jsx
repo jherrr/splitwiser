@@ -5,7 +5,7 @@ var ApiUtil = require('../util/api_util');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var AutoComplete = require('./auto_complete');
-var ChoosePayer = require('./choose_payer');
+// var ChoosePayer = require('./choose_payer');
 
 var UserStore = require('../stores/user');
 
@@ -75,6 +75,7 @@ AddABill = React.createClass({
         }
       </ul>
     )
+    // <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
 
     return(
       <div id="add-a-bill">
@@ -99,7 +100,6 @@ AddABill = React.createClass({
             </form>
 
           </article>
-          <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
           <div className="modal-screen" onClick={this._closeModal}></div>
         </section>
       </div>
