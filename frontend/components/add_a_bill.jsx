@@ -5,7 +5,7 @@ var ApiUtil = require('../util/api_util');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var AutoComplete = require('./auto_complete');
-// var ChoosePayer = require('./choose_payer');
+var ChoosePayer = require('./choose_payer');
 
 var UserStore = require('../stores/user');
 
@@ -16,6 +16,9 @@ AddABill = React.createClass({
   },
   _closeModal: function () {
     this.setState({modalIsOpen: false});
+  },
+  _openSubModal: function () {
+    this.setState({subModalIsOpen: true});
   },
   _usersChanged: function () {
     this.setState({users: UserStore.users()});
@@ -42,6 +45,7 @@ AddABill = React.createClass({
   attrs: {
     description: "",
     modalIsOpen: false,
+    subModalIsOpen: false,
     names: [],
     users: UserStore.users(),
     participants: []
@@ -66,6 +70,11 @@ AddABill = React.createClass({
       modalClass += ' is-active'
     }
 
+    var subModalContentClass = "modal-content sub-modal";
+    if (this.state.subModalIsOpen) {
+      subModalContentClass += ' is-active'
+    }
+
     var listOfParticipants = (
       <ul>
         {
@@ -75,7 +84,6 @@ AddABill = React.createClass({
         }
       </ul>
     )
-    // <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
 
     return(
       <div id="add-a-bill">
@@ -96,9 +104,14 @@ AddABill = React.createClass({
               <label htmlFor='bill-dollar-amt'>Bill Amount</label>
               <input type='text' id='bill-dollar-amt' valueLink={this.linkState("description")} />
 
+              <button onClick={this._openSubModal}> </button>
+
               <button>Save</button>
             </form>
 
+          </article>
+          <article className={subModalContentClass}>
+            <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
           </article>
           <div className="modal-screen" onClick={this._closeModal}></div>
         </section>

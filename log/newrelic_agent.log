@@ -329,3 +329,93 @@ LINE 1: SELECT  "events".* FROM "events" WHERE "events"."event_id" =...
 LINE 1: ...t_id IN (SELECT "events"."id" FROM "events" WHERE "events"."...
                                                              ^
 
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] WARN : No configuration file found. Working directory = /Users/Jher/Desktop/capstone_project
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] WARN : Looked in these locations (based on defaults): /Users/Jher/Desktop/capstone_project/config/newrelic.yml, /Users/Jher/Desktop/capstone_project/newrelic.yml, /Users/Jher/Desktop/capstone_project/config/newrelic.yml, /Users/Jher/Desktop/capstone_project/newrelic.yml, /Users/Jher/.newrelic/newrelic.yml, /Users/Jher/newrelic.yml
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Environment: development
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : No known dispatcher detected.
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Application: development
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing ActiveJob instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Net instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-22 09:57:00 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-22 09:57:01 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Rails 4 view instrumentation
+[2015-12-22 09:57:01 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-22 09:57:01 -0800 Jeffreys-MacBook-Air.local (33604)] INFO : Finished instrumentation
+[2015-12-22 10:00:14 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/Jher/Desktop/capstone_project/app/assets/images
+  /Users/Jher/Desktop/capstone_project/app/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/app/assets/stylesheets
+  /Users/Jher/Desktop/capstone_project/vendor/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/vendor/assets/stylesheets
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+[2015-12-22 10:01:40 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/Jher/Desktop/capstone_project/app/assets/images
+  /Users/Jher/Desktop/capstone_project/app/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/app/assets/stylesheets
+  /Users/Jher/Desktop/capstone_project/vendor/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/vendor/assets/stylesheets
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+[2015-12-22 10:06:35 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/Jher/Desktop/capstone_project/app/assets/images
+  /Users/Jher/Desktop/capstone_project/app/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/app/assets/stylesheets
+  /Users/Jher/Desktop/capstone_project/vendor/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/vendor/assets/stylesheets
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+[2015-12-22 10:06:37 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/Jher/Desktop/capstone_project/app/assets/images
+  /Users/Jher/Desktop/capstone_project/app/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/app/assets/stylesheets
+  /Users/Jher/Desktop/capstone_project/vendor/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/vendor/assets/stylesheets
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+[2015-12-22 10:06:43 -0800 Jeffreys-MacBook-Air.local (3095)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/Jher/Desktop/capstone_project/app/assets/images
+  /Users/Jher/Desktop/capstone_project/app/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/app/assets/stylesheets
+  /Users/Jher/Desktop/capstone_project/vendor/assets/javascripts
+  /Users/Jher/Desktop/capstone_project/vendor/assets/stylesheets
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/Jher/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+[2015-12-22 10:07:46 -0800 Jeffreys-MacBook-Air.local (3095)] INFO : Starting Agent shutdown
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] WARN : No configuration file found. Working directory = /Users/Jher/Desktop/capstone_project
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] WARN : Looked in these locations (based on defaults): /Users/Jher/Desktop/capstone_project/config/newrelic.yml, /Users/Jher/Desktop/capstone_project/newrelic.yml, /Users/Jher/Desktop/capstone_project/config/newrelic.yml, /Users/Jher/Desktop/capstone_project/newrelic.yml, /Users/Jher/.newrelic/newrelic.yml, /Users/Jher/newrelic.yml
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Environment: development
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Dispatcher: webrick
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Application: development
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing ActiveJob instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Net instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Rails 4 view instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-22 10:07:51 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Finished instrumentation
+[2015-12-22 10:07:52 -0800 Jeffreys-MacBook-Air.local (33747)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-22 10:07:56 -0800 Jeffreys-MacBook-Air.local (33747)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-22 10:07:56 -0800 Jeffreys-MacBook-Air.local (33747)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
