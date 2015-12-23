@@ -8,7 +8,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 
 var ApiUtil = require('./util/api_util');
 
-var DashBoard = require('./components/dashboard');
+var DashBoard = require('./components/dashboard/dashboard');
 
 var TransactionIndex = require('./components/transaction_index');
 

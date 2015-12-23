@@ -1,8 +1,8 @@
 var React = require('react');
-var UserStore = require('../stores/user.js');
-var ApiUtil = require('../util/api_util.js');
+var UserStore = require('../../stores/user.js');
+var ApiUtil = require('../../util/api_util.js');
 
-var UserIndexItem = require('./dashboard_user_index_item.jsx');
+var UserIndexItem = require('./user_index_item.jsx');
 
 var UserIndex = React.createClass({
   _onChange: function () {

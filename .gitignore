@@ -24,7 +24,9 @@ bundle.js
 # Ignore application configuration
 /config/application.yml
 
-
+#misc
+log/development.log
+log/newrelic_agent.log
 
 # Ignore bundle
 bundle.js
