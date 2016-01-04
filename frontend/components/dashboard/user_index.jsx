@@ -42,10 +42,17 @@ var UserIndex = React.createClass({
 
     return(
       <div id="user-index-container">
-        <button data-toggle="collapse" data-target="#dashboard-user-index" className="btn button-colored"> </button>
-        <ul id="dashboard-user-index" className="collapse">
-          { listItems }
-        </ul>
+        <div className="row">
+          <div className="content">
+            <button data-toggle="collapse" data-target="#dashboard-user-index"
+               className="btn button-colored btn-block"> </button>
+          </div>
+        </div>
+        <div className="row">
+          <ul id="dashboard-user-index" className="collapse in">
+            { listItems }
+          </ul>
+        </div>
       </div>
     );
   }

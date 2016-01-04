@@ -27,20 +27,20 @@ var BalanceBook = React.createClass({
 
     return (
       <div id="balance-book" className="row">
-        <div className="col-md-2">
-          <p className="content">
+        <div className="col-md-4 col-sm-4 balance-item">
+          <p>
             Balance:
             ${balance}
           </p>
         </div>
-        <div className="col-md-2">
-          <p className="content">
+        <div className="col-md-4 col-sm-4 balance-item balance-middle">
+          <p>
             Lended Amount:
             ${lended_amt}
           </p>
         </div>
-        <div className="col-md-2">
-          <p className="content">
+        <div className="col-md-4 col-sm-4 balance-item">
+          <p>
             Owed Amount:
             ${owed_amt}
           </p>

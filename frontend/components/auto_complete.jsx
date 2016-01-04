@@ -60,7 +60,7 @@ var AutoComplete = React.createClass({
   display_matches: function () {
     var users = this.state.users;
     var intermediate;
-    var display = "No matches";
+    var searchBarDropDownStyle = {}
 
     if (users.length > 0) {
       intermediate = users.map(function (result, i) {
@@ -74,15 +74,19 @@ var AutoComplete = React.createClass({
           {result.username} </ li> ;
           }.bind(this));
 
-
-      display = (
-        <ul id="search-bar-drop-down">
-          {
-            intermediate
-          }
-        </ ul>
-      );
     }
+
+    display = (
+      <div className="col-md-12 col-sm-12">
+          <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
+            onKeyDown={ this.handleKey } className="add-bill-input" />
+          <ul id="search-bar-drop-down">
+            {
+              intermediate
+            }
+          </ ul>
+      </div>
+    );
 
     return display;
   },
@@ -94,9 +98,8 @@ var AutoComplete = React.createClass({
     var display = this.display_matches();
 
     return(
-      <div>
-        <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
-          onKeyDown={ this.handleKey } />
+      <div className="row">
+
         {
           display
         }

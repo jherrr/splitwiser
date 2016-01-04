@@ -6,6 +6,7 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var AutoComplete = require('./auto_complete');
 var ChoosePayer = require('./choose_payer');
+var SplitOptions = require('./add_a_bill/split_options');
 
 var UserStore = require('../stores/user');
 
@@ -17,8 +18,12 @@ AddABill = React.createClass({
   _closeModal: function () {
     this.setState({modalIsOpen: false});
   },
-  _openSubModal: function () {
-    this.setState({subModalIsOpen: true});
+  _toggleSubModal: function () {
+    if ( this.state.subModalIsOpen ) {
+      this.setState({subModalIsOpen: false});
+    } else {
+      this.setState({subModalIsOpen: true});
+    }
   },
   _usersChanged: function () {
     this.setState({users: UserStore.users()});
@@ -42,10 +47,15 @@ AddABill = React.createClass({
   _selectPayer: function () {
 
   },
+  _handleDollarAmt: function () {
+
+  },
   attrs: {
     description: "",
+    dollar_amt: parseFloat(0).toFixed(2),
     modalIsOpen: false,
     subModalIsOpen: false,
+    splitType: "equally",
     names: [],
     users: UserStore.users(),
     participants: []
@@ -61,25 +71,29 @@ AddABill = React.createClass({
     this.userListener.remove();
   },
   selectName: function(e) {
-    debugger;
     this.state.participants
   },
   render: function () {
+    var hiddenStyle = {};
+
     var modalClass = 'modal';
     if (this.state.modalIsOpen) {
       modalClass += ' is-active'
     }
 
-    var subModalContentClass = "modal-content sub-modal";
+    var subModalContentClass = "sub-modal col-sm-6 col-md-6";
     if (this.state.subModalIsOpen) {
       subModalContentClass += ' is-active'
+
+    } else {
+        hiddenStyle.display = "none";
     }
 
     var listOfParticipants = (
       <ul>
         {
           this.state.participants.map ( function( participant ) {
-            return ( <li> {participant.username} </li> );
+            return ( <li key={participant.id} > {participant.username} </li> );
           })
         }
       </ul>
@@ -87,33 +101,51 @@ AddABill = React.createClass({
 
     return(
       <div id="add-a-bill">
-        <button onClick={this._openModal} className="btn button-colored">Add A Bill</button>
-        <section id="modal" className={modalClass}>
-          <article className="modal-content">
-            <span className="modal-close" onClick={this._closeModal}>&times;</span>
-            <button onClick={this._closeModal}>cancel</button>
+        <button type="button" className="btn button-colored" data-toggle="modal" data-target="#myModal">
+          Add A Bill</button>
 
-            <AutoComplete users={this.state.users} autoCallback={this._addParticipant} />
-            {listOfParticipants}
+        <section id="myModal" className="modal fade">
+          <div id="myModal-container" className="row">
+              <article className="modal-content myModal-content col-sm-12 col-md-12">
+                <span className="modal-close" onClick={this._closeModal}>&times;</span>
+                <button type="button" className="btn" data-dismiss="modal">cancel</button>
 
-            <form className='new-bill' onSubmit={this.createBill}>
+                <AutoComplete users={this.state.users} autoCallback={this._addParticipant} />
+                {listOfParticipants}
 
-              <label htmlFor='bill-event-description-type'>Description</label>
-              <input type='text' id='bill-event-description-type' valueLink={this.linkState("description")} />
+                <form className='new-bill' onSubmit={this.createBill}>
 
-              <label htmlFor='bill-dollar-amt'>Bill Amount</label>
-              <input type='text' id='bill-dollar-amt' valueLink={this.linkState("description")} />
+                  <label htmlFor='bill-event-description-type'>Description</label>
+                  <input type='text' id='bill-event-description-type' className="add-bill-input"
+                    valueLink={this.linkState("description")} />
 
-              <button onClick={this._openSubModal}> </button>
+                  <label htmlFor='bill-dollar-amt'>Bill Amount</label>
+                  <input type='text' id='bill-dollar-amt' className="add-bill-input"
+                    onChange={} value={this.state.dollar_amt} />
 
-              <button>Save</button>
-            </form>
+                  <div className='row'>
+                    Split
+                    <button onClick={this._toggleSubModal}>{this.state.splitType}</button>
+                  </div>
 
-          </article>
-          <article className={subModalContentClass}>
-            <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
-          </article>
-          <div className="modal-screen" onClick={this._closeModal}></div>
+                  <button>Save</button>
+                </form>
+
+              </article>
+              <article className="modal-content myModal-content col-sm-12 col-md-12" style={hiddenStyle} >
+                <div>
+                  <button type="button" className="button-split-type btn-primary">Equally</button>
+                  <button type="button" className="button-split-type btn-primary">Percentage</button>
+                  <button type="button" className="button-split-type btn-primary">Exact Amounts</button>
+                </div>
+                <SplitOptions participants={this.state.participants} dollar_amt={this.state.dollar_amt}
+                  splitType={this.state.splitType} />
+                <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
+              </article>
+            </div>
+
+
+
         </section>
       </div>
     );
