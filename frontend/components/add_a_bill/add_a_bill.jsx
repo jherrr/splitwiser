@@ -1,14 +1,17 @@
 var React = require('react');
 
-var ApiUtil = require('../util/api_util');
+var ApiUtil = require('../../util/api_util');
 
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
-var AutoComplete = require('./auto_complete');
-var ChoosePayer = require('./choose_payer');
-var SplitOptions = require('./add_a_bill/split_options');
+var ParticipantsAutoComplete = require('./participants_auto_complete');
+var PayerAutoComplete = require('./payer_auto_complete.jsx');
 
-var UserStore = require('../stores/user');
+var ChoosePayer = require('./choose_payer');
+var SplitOptions = require('./split_options');
+var DatePicker= require('./date_picker');
+
+var UserStore = require('../../stores/user');
 
 AddABill = React.createClass({
   mixins: [LinkedStateMixin],
@@ -18,7 +21,9 @@ AddABill = React.createClass({
   _closeModal: function () {
     this.setState({modalIsOpen: false});
   },
-  _toggleSubModal: function () {
+  _toggleSubModal: function (e) {
+    e.preventDefault();
+
     if ( this.state.subModalIsOpen ) {
       this.setState({subModalIsOpen: false});
     } else {
@@ -58,7 +63,8 @@ AddABill = React.createClass({
     splitType: "equally",
     names: [],
     users: UserStore.users(),
-    participants: []
+    participants: [],
+    payer: window.username
   },
   getInitialState: function () {
     return this.attrs;
@@ -90,7 +96,7 @@ AddABill = React.createClass({
     }
 
     var listOfParticipants = (
-      <ul>
+      <ul id='list-of-participants'>
         {
           this.state.participants.map ( function( participant ) {
             return ( <li key={participant.id} > {participant.username} </li> );
@@ -107,28 +113,32 @@ AddABill = React.createClass({
         <section id="myModal" className="modal fade">
           <div id="myModal-container" className="row">
               <article className="modal-content myModal-content col-sm-12 col-md-12">
-                <span className="modal-close" onClick={this._closeModal}>&times;</span>
-                <button type="button" className="btn" data-dismiss="modal">cancel</button>
+                <span className="modal-close" data-dismiss="modal">&times;</span>
 
-                <AutoComplete users={this.state.users} autoCallback={this._addParticipant} />
+                <ParticipantsAutoComplete users={this.state.users} autoCallback={this._addParticipant} />
                 {listOfParticipants}
 
-                <form className='new-bill' onSubmit={this.createBill}>
+                <PayerAutoComplete currentUsername={this.state.payer} users={this.state.users} autoCallback={this._selectPayer} />
 
-                  <label htmlFor='bill-event-description-type'>Description</label>
+                <form className='new-bill' onSubmit={this.createBill}>
+                  <label htmlFor='bill-event-description-type' className='add-bill-input-label'>Description</label>
                   <input type='text' id='bill-event-description-type' className="add-bill-input"
                     valueLink={this.linkState("description")} />
 
-                  <label htmlFor='bill-dollar-amt'>Bill Amount</label>
+                  <label htmlFor='bill-dollar-amt' className='add-bill-input-label'>Bill Amount</label>
                   <input type='text' id='bill-dollar-amt' className="add-bill-input"
                     onChange={this._handleDollarAmt} value={this.state.dollar_amt} />
 
+                  <DatePicker></DatePicker>
+
                   <div className='row'>
-                    Split
-                    <button onClick={this._toggleSubModal}>{this.state.splitType}</button>
+                    <label htmlFor='sub-modal-button'>Split: </label>
+                    <button className="btn button-small" id="sub-modal-button"
+                      onClick={this._toggleSubModal}>{this.state.splitType}</button>
                   </div>
 
-                  <button>Save</button>
+                  <button className="btn button-small">Save</button>
+                  <button type="button" className="btn button-small" data-dismiss="modal">cancel</button>
                 </form>
 
               </article>

@@ -9,7 +9,6 @@ SplitOptions = React.createClass({
        splitType: this.props.splitType, dollar_amt: this.props.dollar_amt } ;
   },
   display: function () {
-    debugger;
     var sltOpt = this.state.splitType;
     var listItems;
     var participants = this.state.participants;

@@ -7,7 +7,7 @@ var UserStore = require('../../stores/user');
 var ApiUtil = require('../../util/api_util');
 
 var BalanceBook = require('../balance_book');
-var AddABill = require('../add_a_bill');
+var AddABill = require('../add_a_bill/add_a_bill');
 
 var UserIndex = require('./user_index');
 

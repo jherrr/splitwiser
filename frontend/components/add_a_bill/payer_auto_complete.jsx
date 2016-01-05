@@ -1,14 +1,8 @@
 var React = require('react');
 
-
 var AutoComplete = React.createClass({
-  _initialAttrs: {
-    inputVal: "",
-    users: [],
-    selectedItemIdx: 0
-  },
   getInitialState: function () {
-    return this._initialAttrs;
+    return {inputVal: this.props.currentUsername, users: [], selectedItemIdx: 0};
   },
   handleInput: function (event) {
     var inputVal = event.currentTarget.value;
@@ -18,7 +12,7 @@ var AutoComplete = React.createClass({
   },
   handleKey: function ( event ) {
     if ( event.which === 13 ) {
-      this.addNameSelected();
+      this.selectNameSelected();
 
     } else if ( event.which === 38 ) {
       event.preventDefault();
@@ -36,11 +30,11 @@ var AutoComplete = React.createClass({
     }
 
   },
-  addNameSelected: function (e) {
+  selectNameSelected: function (e) {
     var output = this.state.users[this.state.selectedItemIdx];
 
     this.props.autoCallback(output);
-    this.setState(this._initialAttrs);
+    this.setState({inputVal: output.username, users: [], selectedItemIdx: 0});
   },
   matches: function ( inputVal ) {
     var matches = [];
@@ -78,6 +72,7 @@ var AutoComplete = React.createClass({
 
     display = (
       <div className="col-md-12 col-sm-12">
+          <label htmlFor='search-bar' className='add-bill-input-label'>Paid By</label>
           <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
             onKeyDown={ this.handleKey } className="add-bill-input" />
           <ul id="search-bar-drop-down">
@@ -99,7 +94,6 @@ var AutoComplete = React.createClass({
 
     return(
       <div className="row">
-
         {
           display
         }
