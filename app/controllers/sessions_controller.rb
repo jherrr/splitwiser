@@ -27,4 +27,13 @@ class SessionsController < ApplicationController
   def new
     render :new
   end
+
+  def new_guest_session
+    guest_id = Random.rand(6) + 1
+    user = User.find_by id: guest_id
+    login_user!(user)
+
+    redirect_to (root_url + "#/dashboard")
+  end
+
 end

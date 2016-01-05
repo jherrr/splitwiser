@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :event_splits, only: [:index, :create, :show]
   end
 
+  get 'guest_session', to: "sessions#new_guest_session"
 
   root "static_pages#root"
 end

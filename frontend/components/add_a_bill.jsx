@@ -121,7 +121,7 @@ AddABill = React.createClass({
 
                   <label htmlFor='bill-dollar-amt'>Bill Amount</label>
                   <input type='text' id='bill-dollar-amt' className="add-bill-input"
-                    onChange={} value={this.state.dollar_amt} />
+                    onChange={this._handleDollarAmt} value={this.state.dollar_amt} />
 
                   <div className='row'>
                     Split
