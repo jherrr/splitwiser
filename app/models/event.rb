@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  validates :lender_id, :item, :description, :dollar_amt, presence: true
+  validates :lender_id, :description, :dollar_amt, presence: true
 
   belongs_to(
     :lender,

@@ -16,6 +16,10 @@ var DashBoard = React.createClass({
   getInitialState: function() {
     return {};
   },
+  componentDidMount: function() {
+    ApiUtil.fetchUsers();
+    ApiUtil.fetchBalances(window.user_id);
+  },
   render: function() {
     return (
       <div id="dashboard">

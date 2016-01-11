@@ -1,25 +1,31 @@
 var React = require('react');
 var UserStore = require('../../stores/user.js');
+var BalanceStore = require('../../stores/balance.js');
+
 var ApiUtil = require('../../util/api_util.js');
 
 var UserIndexItem = require('./user_index_item.jsx');
 
 var UserIndex = React.createClass({
-  _onChange: function () {
+  _onUserChange: function () {
     this.setState({owedAmts: UserStore.owedAmounts(), lendedAmts: UserStore.lendedAmounts(),
                   users: UserStore.users()});
+  },
+  _onBalanceChange: function () {
+    var balances = BalanceStore.all();
   },
   getInitialState: function () {
     return {users: [] , owedAmts: {}, lendedAmts: {}};
   },
   componentDidMount: function () {
-    this.userListener = UserStore.addListener(this._onChange);
-    ApiUtil.fetchUsers();
+    this.userListener = UserStore.addListener(this._onUserChange);
+    this.balanceListener = BalanceStore.addListener(this._onBalanceChange);
     ApiUtil.fetchUserLendedAmounts(window.user_id);
     ApiUtil.fetchUserOwedAmounts(window.user_id);
   },
   compomentWillUnmount: function () {
     this.userListener.remove();
+    this.balanceListener.remove();
   },
   render: function () {
     var listItems = [];

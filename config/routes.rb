@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :transactions, only: [:index, :create]
     resources :events, only: [:index, :create]
     resources :event_splits, only: [:index, :create, :show]
+    resources :balances, only: [:index, :create, :show]
   end
 
   get 'guest_session', to: "sessions#new_guest_session"

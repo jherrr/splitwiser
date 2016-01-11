@@ -8,7 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
+  * file per style scope.
  *
  *= require_tree .
  *= require_self
@@ -68,7 +68,7 @@
   }
 
   html {
-    background: url("background.jpg") no-repeat center center fixed;
+    background: url("background_01.jpg") no-repeat center center fixed;
     margin: 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -78,29 +78,30 @@
 
   .content {
     font: helvetica, sans-serif;
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     border-top: solid;
-    border-top-color: rgba(255, 255, 255, 0.5);
+    border-top-color: rgba(255, 255, 255, 0.7);
     border-top-width: 1px;
     width: 40vh;
   }
 
   .balance-item {
     font: helvetica, sans-serif;
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .balance-middle {
     border-left: solid;
     border-right: solid;
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.7);
     border-width: 1px;
   }
 
   .button-colored {
     background-color: rgba(128, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .btn {

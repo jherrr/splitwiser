@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217194435) do
+ActiveRecord::Schema.define(version: 20160111080747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "balances", force: :cascade do |t|
+    t.integer  "current_user_id",                   null: false
+    t.integer  "amt_user_is_owed",      default: 0, null: false
+    t.integer  "amt_user_is_paid_back", default: 0, null: false
+    t.integer  "amt_user_owes",         default: 0, null: false
+    t.integer  "amt_user_paid_back",    default: 0, null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "associate_id",                      null: false
+  end
+
+  add_index "balances", ["current_user_id", "associate_id"], name: "index_balances_on_current_user_id_and_associate_id", unique: true, using: :btree
 
   create_table "event_splits", force: :cascade do |t|
     t.integer  "user_id",                     null: false
@@ -30,13 +43,13 @@ ActiveRecord::Schema.define(version: 20151217194435) do
 
   create_table "events", force: :cascade do |t|
     t.integer  "lender_id",                   null: false
-    t.string   "item",                        null: false
     t.text     "description",                 null: false
     t.integer  "dollar_amt",                  null: false
     t.boolean  "settled",     default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "split_type"
+    t.date     "event_date",                  null: false
   end
 
   add_index "events", ["lender_id"], name: "index_events_on_lender_id", using: :btree

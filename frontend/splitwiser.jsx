@@ -41,6 +41,7 @@ var routes = (
   </Route>
 );
 
+window.BalanceStore = require('./stores/balance');
 window.EventSplitStore = EventSplitStore;
 window.EventStore = EventStore;
 window.TransactionStore = TransactionStore;

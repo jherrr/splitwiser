@@ -4,6 +4,7 @@ var EventSplitActions = require('../actions/event_split_actions');
 var UserActions = require('../actions/user_actions');
 var LendedAmountActions = require('../actions/lended_amount_actions');
 var CurrentUserActions = require('../actions/current_user_actions');
+var BalanceActions = require('../actions/balance_actions');
 
 ApiUtil = {
   fetchTransactions: function() {
@@ -44,6 +45,7 @@ ApiUtil = {
     $.ajax({
       url: "api/user_data",
       success: function (users) {
+        debugger;
         UserActions.receiveAllUsers(users);
       }
     });
@@ -86,7 +88,25 @@ ApiUtil = {
       success: function (owedAmountData) {
         UserActions.receiveOwedAmounts( owedAmountData );
       }
-    });
+    })
+  },
+  createNewEvent: function( data ) {
+    $.ajax({
+      url: "api/events/",
+      method: "POST",
+      data: data,
+      success: function ( stuff ) {
+        debugger;
+      }
+    })
+  },
+  fetchBalances: function ( current_user_id ) {
+    $.ajax({
+      url: "api/balances/" + current_user_id,
+      success: function ( balance_data ) {
+        BalanceActions.receiveBalances( balance_data );
+      }
+    })
   }
 };
 
