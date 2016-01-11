@@ -1,4 +1,5 @@
 var React = require('react');
+
 var UserStore = require('../../stores/user.js');
 var BalanceStore = require('../../stores/balance.js');
 
@@ -8,20 +9,17 @@ var UserIndexItem = require('./user_index_item.jsx');
 
 var UserIndex = React.createClass({
   _onUserChange: function () {
-    this.setState({owedAmts: UserStore.owedAmounts(), lendedAmts: UserStore.lendedAmounts(),
-                  users: UserStore.users()});
+    this.setState({users: UserStore.users()});
   },
   _onBalanceChange: function () {
-    var balances = BalanceStore.all();
+    this.setState({balances: BalanceStore.all()});
   },
   getInitialState: function () {
-    return {users: [] , owedAmts: {}, lendedAmts: {}};
+    return {users: [], balances: {}};
   },
   componentDidMount: function () {
     this.userListener = UserStore.addListener(this._onUserChange);
     this.balanceListener = BalanceStore.addListener(this._onBalanceChange);
-    ApiUtil.fetchUserLendedAmounts(window.user_id);
-    ApiUtil.fetchUserOwedAmounts(window.user_id);
   },
   compomentWillUnmount: function () {
     this.userListener.remove();
@@ -31,18 +29,17 @@ var UserIndex = React.createClass({
     var listItems = [];
 
     this.state.users.forEach( function (user)  {
-      var owed = this.state.owedAmts[user.id];
-      var lend = this.state.lendedAmts[user.id];
+      var balance = this.state.balances[user.id];
+      var owes = 0;
+      var lend = 0;
 
-      if ( !owed ) {
-        owed = 0;
-      }
-      if ( !lend ) {
-        lend = 0;
+      if ( balance ) {
+        owes = balance.amt_user_owes - balance.amt_user_paid_back
+        lend = balance.amt_user_is_owed - balance.amt_user_is_paid_back
       }
 
-      if ((owed - lend) !== 0) {
-        listItems.push( <UserIndexItem key={user.id} owed={owed} lend={lend} user={user}/> );
+      if ((owes - lend) !== 0) {
+        listItems.push( <UserIndexItem key={user.id} owed={owes} lend={lend} user={user}/> );
       }
     }.bind(this));
 

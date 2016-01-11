@@ -90,6 +90,10 @@ ApiUtil = {
       }
     })
   },
+
+
+
+  
   createNewEvent: function( data ) {
     $.ajax({
       url: "api/events/",
