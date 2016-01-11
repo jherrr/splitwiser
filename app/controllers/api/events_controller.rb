@@ -23,6 +23,8 @@ class Api::EventsController < ApplicationController
       current_user_split_amt = round_dollar_amt(splits[lender_id])
       current_user_lend_amt = pay_amt - current_user_split_amt
 
+      #only need to export current_user.id balances
+      @balances = {}
 
       if balance
 
@@ -33,6 +35,8 @@ class Api::EventsController < ApplicationController
         balance = Balance.create!(current_user_id: lender_id,
         amt_user_is_owed: current_user_lend_amt, associate_id: lender_id)
       end
+
+      @balances[lender_id] = balance
 
       insertSplitData = []
       insertBalanceData = []
@@ -53,6 +57,7 @@ class Api::EventsController < ApplicationController
       puts "splits: "
       puts splits
 
+      #generate balances
       #delete lender_id, so we don't amt_user_owes ourselves, the lender
       splits.delete(lender_id)
 
@@ -69,6 +74,7 @@ class Api::EventsController < ApplicationController
 
         if current_to_other.valid?
           current_to_other.save
+          @balances[associate_id] = current_to_other
         else
           existing_current_to_other[:associate_id].push(associate_id)
         end
@@ -100,6 +106,7 @@ class Api::EventsController < ApplicationController
       Balance.where(existing_current_to_other).each do |balance|
         balance.amt_user_owes += round_dollar_amt(splits[balance.associate_id.to_s])
         balance.save!
+        @balances[balance.associate_id] = balance
       end
 
       Balance.where("associate_id = current_user_id").where(existing_other_to_other).each do
@@ -112,36 +119,6 @@ class Api::EventsController < ApplicationController
         balance.amt_user_owes += round_dollar_amt(splits[balance.current_user_id.to_s])
         balance.save!
       end
-
-      # balances = Balance.where current_user_id: lender_id,
-      #   associate_id: splits.keys
-      # other_user_personal_balances = Balance.where(current_user_id: splits.keys)
-      #   .where("current_user_id = associate_id")
-      # other_to_current_balances = Balance.where current_user_id: splits.keys,
-      #   associate_id: lender_id
-      #
-      # #update existing balances for splits
-      # balances.each do |balance|
-      #   dollar_amt = round_dollar_amt(splits[balance.associate_id.to_s])
-      #   splits.delete(balance.associate_id.to_s)
-      #
-      #   balance.amt_user_owes += dollar_amt
-      #   balance.save!
-      # end
-      #
-      # #create new balances for splits
-      # splits.each do |key, value|
-      #   insertBalanceDatum = {}
-      #
-      #   dollar_amt = round_dollar_amt(value)
-      #   insertBalanceDatum[:current_user_id] = lender_id
-      #   insertBalanceDatum[:associate_id] = key
-      #   insertBalanceDatum[:amt_user_owes] = dollar_amt
-      #
-      #   insertBalanceData.push(insertBalanceDatum)
-      # end
-      #
-      # much_more_balances = Balance.create!(insertBalanceData)
 
     #end of transaction
     end

@@ -93,14 +93,16 @@ ApiUtil = {
 
 
 
-  
+
   createNewEvent: function( data ) {
     $.ajax({
       url: "api/events/",
       method: "POST",
       data: data,
-      success: function ( stuff ) {
-        debugger;
+      success: function ( changedData ) {
+        BalanceActions.receiveUpdatedBalances( changedData.balances );
+        //need to add Event Actions and EventSplitActions
+
       }
     })
   },

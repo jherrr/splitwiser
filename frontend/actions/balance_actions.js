@@ -7,6 +7,12 @@ var BalanceActions = {
       actionType: BalanceConstants.BALANCES_RECEIVED,
       balances: balance_data.balances
     });
+  },
+  receiveUpdatedBalances: function ( balance_data ) {
+    Dispatcher.dispatch({
+      actionType: BalanceConstants.UPDATED_BALANCES_RECEIVED,
+      balances: balance_data
+    });
   }
 };
 
