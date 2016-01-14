@@ -34,10 +34,21 @@ var App = React.createClass({
   }
 });
 
+var preventIfLoggedIn = function (nextState, replaceState) {
+
+  debugger;
+
+  if (!SessionStore.isloggedIn()) {
+    replaceState(null, "/new_session");
+  }
+};
+
+
 var routes = (
   <Route path="/" component={App}>
-    <Route path='dashboard' component={DashBoard} />
+    <Route path='dashboard' component={DashBoard} onEnter={ preventIfLoggedIn } />
     <Route path='transactionIndex' component={TransactionIndex} />
+
   </Route>
 );
 

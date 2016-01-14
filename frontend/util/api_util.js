@@ -113,6 +113,14 @@ ApiUtil = {
         BalanceActions.receiveBalances( balance_data );
       }
     })
+  },
+  createNewSession: function ( stuff ) {
+    $.ajax({
+      url: "api/session/new",
+      success: function ( moreStuff ) {
+
+      }
+    });
   }
 };
 
