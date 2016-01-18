@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     resource :session, only: [:create, :destroy]
     resources :user_data, only: [:index]
-    resources :transactions, only: [:index, :create]
+    resources :transactions, only: [:show, :index, :create]
     resources :events, only: [:show, :index, :create]
     resources :event_splits, only: [:index, :create, :show]
     resources :balances, only: [:index, :create, :show]

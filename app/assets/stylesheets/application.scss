@@ -54,6 +54,18 @@
      width: 85%;
    }
 
+   .search-bar {
+     position: relative;
+   }
+
+   .search-bar-drop-down {
+    //  border: 1px solid #ccc;
+     position: absolute;
+     box-shadow: 5px 8px 5px 0 #888888;
+     z-index: 1;
+     width: 85%;
+   }
+
    .search-bar-item {
      background-color: white;
      border: 1px solid #ccc;
@@ -185,6 +197,19 @@
 
 #list-of-participants {
   margin-bottom: 0;
+}
+
+.event-item {
+  font: helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5vh;
+}
+
+#event-index {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
 }
 
 

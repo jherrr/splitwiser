@@ -224,9 +224,6 @@ AddABill = React.createClass({
 
     return(
       <div id="add-a-bill">
-        <button type="button" className="btn button-colored" data-toggle="modal" data-target="#myModal">
-          Add A Bill</button>
-
         <section id="myModal" className="modal fade">
           <div id="myModal-container" className="row">
               <article className="modal-content myModal-content col-sm-12 col-md-12">

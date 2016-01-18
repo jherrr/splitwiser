@@ -20,7 +20,7 @@ var NavBar = React.createClass({
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
               <li className="active" data-toggle="modal" data-target="#myModal">Add A Bill</li>
-              <li><a href="#">Link</a></li>
+              <li data-toggle="modal" data-target="#transaction-modal">Pay What You Paid Back</li>
 
             </ul>
 

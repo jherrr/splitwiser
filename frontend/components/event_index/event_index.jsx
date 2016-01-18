@@ -30,10 +30,10 @@ var EventIndex = React.createClass({
     });
 
     return(
-      <div id="transaction-index">
-        <div id="list-items">
+      <div id="event-index">
+        <ul id="list-items">
           {listItems}
-        </div>
+        </ul>
       </div>
     );
   }

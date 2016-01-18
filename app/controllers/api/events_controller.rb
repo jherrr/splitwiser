@@ -79,7 +79,7 @@ class Api::EventsController < ApplicationController
 
         options = {current_user_id: lender_id,
          associate_id: associate_id, amt_user_owes: dollar_amt}
-        current_to_other = current_to_other = Balance.new(options)
+        current_to_other = Balance.new(options)
 
         if current_to_other.valid?
           current_to_other.save

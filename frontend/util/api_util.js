@@ -154,6 +154,17 @@ ApiUtil = {
         IndexActions.receiveAllEventSplits(eventSplits);
       }
     });
+  },
+  createNewTransaction: function ( data ) {
+    $.ajax({
+      url: "api/transactions",
+      method: "POST",
+      data: data,
+      success: function ( stuff ) {
+        BalanceActions.receiveUpdatedBalances( stuff );
+        //need to add transaction actions
+      }
+    });
   }
 };
 
