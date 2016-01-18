@@ -11,6 +11,7 @@ var ChoosePayer = require('./choose_payer');
 var SplitOptions = require('./split_options');
 var DatePicker= require('./date_picker');
 
+var SessionStore = require('../../stores/session');
 var UserStore = require('../../stores/user');
 
 AddABill = React.createClass({
@@ -111,7 +112,6 @@ AddABill = React.createClass({
 
 
     this.setState($.extend(blankAttrs, {splitData: splitData, equallyData: equallyData}));
-    debugger;
   },
   _selectPayer: function () {
 
@@ -164,11 +164,9 @@ AddABill = React.createClass({
     splitType: "equally",
     names: [],
     users: UserStore.users(),
-    participants: [{username: window.username, id: window.user_id}],
-    payer: {username: window.username, id: window.user_id},
+    participants: [],
+    payer: {},
     eventDate: "",
-    splitData: {},
-    equallyData: {}
   },
   getInitialState: function () {
     return this.attrs;
@@ -177,14 +175,20 @@ AddABill = React.createClass({
     this.userListener = UserStore.addListener(this._usersChanged);
 
     //setting initial split to current user
-    var splitData = this.state.splitData;
-    var equallyData = this.state.equallyData;
+    var splitData = {};
+    var equallyData = {};
 
     splitData[window.user_id] = parseInt( this.state.dollar_amt * 100 );
     equallyData[window.user_id] = true;
+    participants = [{username: window.username, id: window.user_id}];
+    payer = {username: window.username, id: window.user_id};
 
-
-    this.setState({splitData: splitData, equallyData: equallyData});
+    this.setState({
+      splitData: splitData,
+      equallyData: equallyData,
+      participants: participants,
+      payer: payer
+    });
   },
   componentWillUnmount: function () {
     this.userListener.remove();
@@ -242,7 +246,9 @@ AddABill = React.createClass({
                   <input type='text' id='bill-dollar-amt' className="add-bill-input"
                     onChange={this._handleDollarAmt} onBlur={this._formatDollarAmt} value={this.state.dollar_amt} />
 
-                  <DatePicker dateCallback={this._handleDate}></DatePicker>
+                  <br />
+                  <label htmlFor='bill-date-picker' className="add-bill-input-label">Date</label>
+                  <DatePicker id='bill-date-picker' dateCallback={this._handleDate}></DatePicker>
                 </form>
 
                 <div className='row'>

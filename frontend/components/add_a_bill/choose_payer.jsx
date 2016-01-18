@@ -2,6 +2,12 @@ var React = require('react');
 
 var ChoosePayer = React.createClass({
   getInitialState: function () {
+    return { users: [], selectedIdx: 0 };
+  },
+  handleClick: function () {
+    debugger;
+  },
+  componentDidMount: function () {
     var selectedIdx = 0;
     this.props.users.forEach( function ( user, idx ) {
       if ( user.id === window.user_id ) {
@@ -9,13 +15,7 @@ var ChoosePayer = React.createClass({
       }
     });
 
-    return { users: this.props.users, selectedIdx: selectedIdx };
-  },
-  handleClick: function () {
-    debugger;
-  },
-  componentWillMount: function () {
-
+    this.setState({users: this.props.users, selectedIdx: selectedIdx});
   },
   _choosePersonDropDownDisplay: function () {
     return this.props.users.map( function(user, idx) {

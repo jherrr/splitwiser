@@ -4,7 +4,10 @@ var EventSplitActions = require('../actions/event_split_actions');
 var UserActions = require('../actions/user_actions');
 var LendedAmountActions = require('../actions/lended_amount_actions');
 var CurrentUserActions = require('../actions/current_user_actions');
+
 var BalanceActions = require('../actions/balance_actions');
+var SessionActions = require('../actions/session_actions');
+var IndexActions = require('../actions/index_actions');
 
 ApiUtil = {
   fetchTransactions: function() {
@@ -114,16 +117,44 @@ ApiUtil = {
       }
     })
   },
-  createNewSession: function ( stuff ) {
+  createNewSession: function ( data ) {
     $.ajax({
-      url: "api/session/new",
-      success: function ( moreStuff ) {
+      url: "api/session/",
+      method: "POST",
+      data: data,
+      success: function ( sessionData ) {
+        window.user_id = sessionData.id;
+        window.username = sessionData.username;
+        SessionActions.receiveSession( sessionData );
+      }
+    });
+  },
+  destroySession: function () {
+    $.ajax({
+      url: "api/session",
+      method: "DELETE",
+      success: function ( sessionData ) {
+        window.user_id = undefined;
+        window.username = undefined;
+      }
+    })
+  },
+  fetchIndex: function ( user_id ) {
+    $.ajax({
+      url: "api/events/" + user_id,
+      success: function (events) {
+        IndexActions.receiveAllEvents(events);
+      }
+    });
 
+    $.ajax({
+      url: "api/event_splits/" + user_id,
+      success: function (eventSplits) {
+        debugger;
+        IndexActions.receiveAllEventSplits(eventSplits);
       }
     });
   }
 };
-
-
 
 module.exports = ApiUtil;

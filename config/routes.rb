@@ -9,10 +9,10 @@ Rails.application.routes.draw do
     get 'lended_amount_user/:id', to: "events#lended_amount"
     get 'owed_amount_user/:id', to: "events#owed_amount"
 
-    resource :session, only: [:new, :create, :destroy]
+    resource :session, only: [:create, :destroy]
     resources :user_data, only: [:index]
     resources :transactions, only: [:index, :create]
-    resources :events, only: [:index, :create]
+    resources :events, only: [:show, :index, :create]
     resources :event_splits, only: [:index, :create, :show]
     resources :balances, only: [:index, :create, :show]
   end

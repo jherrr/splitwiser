@@ -38,7 +38,7 @@ var UserIndex = React.createClass({
         lend = balance.amt_user_is_owed - balance.amt_user_is_paid_back
       }
 
-      if ((owes - lend) !== 0) {
+      if ( ((owes - lend) !== 0) && user.id != window.user_id ) {
         listItems.push( <UserIndexItem key={user.id} owed={owes} lend={lend} user={user}/> );
       }
     }.bind(this));

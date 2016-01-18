@@ -2,13 +2,19 @@ var React = require('react');
 
 var AutoComplete = React.createClass({
   getInitialState: function () {
-    return {inputVal: this.props.currentUsername, users: [], selectedItemIdx: 0};
+    return {inputVal: "", users: [], selectedItemIdx: 0};
+  },
+  componentDidMount: function () {
+    this.setState({inputVal: this.props.currentUsername, users: [], selectedItemIdx: 0});
   },
   handleInput: function (event) {
     var inputVal = event.currentTarget.value;
     var users = this.matches(inputVal);
 
     this.setState({ inputVal: inputVal, users: users });
+  },
+  componentWillReceiveProps: function (newProps) {
+    this.setState({inputVal: newProps.currentUsername});
   },
   handleKey: function ( event ) {
     if ( event.which === 13 ) {

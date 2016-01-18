@@ -1,7 +1,5 @@
 class Api::SessionsController < ApplicationController
 
-  before_action :require_no_user!, only: [:create, :new]
-
   def create
     user = User.find_by_credentials(
       params[:user][:username],
@@ -11,23 +9,27 @@ class Api::SessionsController < ApplicationController
     @output = {}
 
     if user.nil?
-      @output = {authenticated: false}
-      render json: output
+      @output = {
+        authenticated: false,
+      }
+
+      render json: @output
     else
-      @output = {authenticated: true}
+      @output = {
+        authenticated: true,
+        username: user.username,
+        id: user.id
+      }
+
       login_user!(user)
-      render json: output
+      render json: @output
     end
   end
 
   def destroy
     logout_user!
     @output = {authenticated: false}
-    render json: output
-  end
-
-  def new
-    render :new
+    render json: @output
   end
 
   def new_guest_session
@@ -35,7 +37,8 @@ class Api::SessionsController < ApplicationController
     user = User.find_by id: guest_id
     login_user!(user)
 
-    redirect_to (root_url + "#/dashboard")
+    @output = {authenticated: false}
+    render json: @output
   end
 
 end

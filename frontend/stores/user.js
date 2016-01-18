@@ -32,7 +32,6 @@ var resetOwedAmounts = function(owedAmountData) {
 };
 
 UserStore.__onDispatch = function (payload) {
-  debugger;
   switch(payload.actionType) {
     case UserConstants.USERS_RECEIVED:
       resetUsers(payload.users);

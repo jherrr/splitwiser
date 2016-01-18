@@ -5,6 +5,11 @@ class Api::EventsController < ApplicationController
     render 'index'
   end
 
+  def show
+    @events = Event.where(lender_id: params[:id]).order(event_date: :desc).includes(:lender)
+    render 'show'
+  end
+
   def create
 
     ActiveRecord::Base.transaction do
@@ -65,6 +70,10 @@ class Api::EventsController < ApplicationController
       existing_other_to_other = {current_user_id: []}
       existing_other_to_current = {current_user_id: [], associate_id: lender_id}
 
+      #if balance obj is valid, it is new combination of associate_id and current_user_id
+      #thus create a new balance row if it is valid
+      #else, balance obj is already existing for the combo of associate_id and current_user_id
+      #we will find the existing rows and update them in the code after this loop
       splits.each do |associate_id, splitValue|
         dollar_amt = round_dollar_amt(splitValue)
 
@@ -90,9 +99,8 @@ class Api::EventsController < ApplicationController
         end
 
         options = {current_user_id: associate_id,
-         associate_id: lender_id, amt_user_owes: dollar_amt}
+         associate_id: lender_id, amt_user_is_owed: dollar_amt}
         other_to_current = Balance.new(options)
-
 
         if other_to_current.valid?
           other_to_current.save
@@ -102,7 +110,7 @@ class Api::EventsController < ApplicationController
 
       end
 
-      #find and update
+      #find existing and update
       Balance.where(existing_current_to_other).each do |balance|
         balance.amt_user_owes += round_dollar_amt(splits[balance.associate_id.to_s])
         balance.save!
@@ -116,7 +124,7 @@ class Api::EventsController < ApplicationController
       end
 
       Balance.where(existing_other_to_current).each do |balance|
-        balance.amt_user_owes += round_dollar_amt(splits[balance.current_user_id.to_s])
+        balance.amt_user_is_owed += round_dollar_amt(splits[balance.current_user_id.to_s])
         balance.save!
       end
 

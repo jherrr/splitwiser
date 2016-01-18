@@ -19,7 +19,6 @@ var updateBalances = function(balances) {
 }
 
 BalanceStore.__onDispatch = function (payload) {
-  debugger;
   switch(payload.actionType) {
     case BalanceConstants.BALANCES_RECEIVED:
       resetBalances(payload.balances);

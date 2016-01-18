@@ -4,7 +4,6 @@ var EventStore = require('../stores/event');
 var TransactionStore = require('../stores/transaction');
 var ApiUtil = require('../util/api_util');
 
-var BalanceBook = require('./balance_book');
 var EventItemIndex = require('./event_index_item');
 
 var AppConstants = require('../constants/app_constants');
@@ -77,7 +76,6 @@ var TransactionIndex = React.createClass({
     });
     return(
       <div id="transaction-index">
-        <BalanceBook />
         <div id="list-items">
           {listItems}
         </div>

@@ -7,4 +7,5 @@ end
 json.event do
   json.extract! event_split.event :dollar_amt
   json.event_owner event_split.event.lender.id
+  json.event_date event_split.event.event_date
 end

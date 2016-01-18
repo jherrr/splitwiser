@@ -12,7 +12,8 @@ class Api::EventSplitsController < ApplicationController
 
   def show
     user_id = params[:id]
-    @event_splits = EventSplit.where(user_id: user_id)
+
+    @event_splits = EventSplit.where(user_id: user_id).includes(:event)
 
     render 'show'
   end
