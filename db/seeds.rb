@@ -11,6 +11,7 @@ User.destroy_all
 Event.destroy_all
 EventSplit.destroy_all
 Transaction.destroy_all
+Balance.destroy_all
 
 Users = User.create([{id: 1, username: 'Jeff', password: 'password', email: 'jeffher@gmail.com'},
                     {id: 2, username: 'Colin', password: 'password', email: 'collinchen@gmail.com'},
@@ -482,4 +483,5 @@ Balances = Balance.create([
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('events')
 ActiveRecord::Base.connection.reset_pk_sequence!('event_splits')
+ActiveRecord::Base.connection.reset_pk_sequence!('balances')
 ActiveRecord::Base.connection.reset_pk_sequence!('transactions')
