@@ -37,12 +37,12 @@ SessionForm = React.createClass({
 
     return (
       <div className="log-in-background-container">
-        <div className="session-form-container container">
-          <h1>Login</h1>
+        <div className="login-overlay">
+          <div className="session-form-container row">
+            <div className='col-md-offset-1 col-md-5'>
+              <h1>Login</h1>
 
-          <form>
-            <div className="row">
-              <div className="col-md-offset-1 col-md-5">
+              <form>
                 <label htmlFor="user_username">Username</label>
                 <input
                   type="text"
@@ -51,22 +51,25 @@ SessionForm = React.createClass({
                   onBlur={ this._textBlur.bind(this, {username: "username"}) }
                   valueLink={this.linkState("username")}
                   id="user_username" />
-              </div>
-            </div>
 
-          <div className="row">
-            <div className="col-md-offset-1 col-md-5">
-              <label htmlFor="user_password">Password</label>
-              <input
-                type="password"
-                name="user[password]"
-                valueLink={this.linkState("password")}
-                id="user_password" />
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Username</span>
+                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <label htmlFor="user_password">Password</label>
+                <input
+                  type="password"
+                  name="user[password]"
+                  valueLink={this.linkState("password")}
+                  id="user_password" />
+
+                <input onClick={ this._handleSubmit }
+                  type="submit" />
+              </form>
+
             </div>
           </div>
-
-            <input onClick={ this._handleSubmit } type="submit" />
-          </form>
         </div>
       </div>
 

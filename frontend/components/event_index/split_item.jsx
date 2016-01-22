@@ -6,12 +6,8 @@ SplitItem = React.createClass({
 
     return (
       <li className="event-index-item event-item">
-        <p>{split.dollar_amt}
-            {split.username}
-            {split.event_date}
-            {split.event_description}
-            {split.event_owner_name}
-        </p>
+          {split.event_owner_name} paid ${split.dollar_amt} for you on {split.event_date}. <br />
+          This was for {split.event_description}.
       </li>
     );
   }

@@ -46,7 +46,12 @@ var UserIndex = React.createClass({
     return(
         <div className="index-container col-md-12 col-xs-12">
           <div className="row user-panel">
-            <ul>
+            <div className="user-index-header">
+                <strong>
+                  Friends
+                </strong>
+            </div>
+            <ul className="list-group">
               { listItems }
             </ul>
           </div>

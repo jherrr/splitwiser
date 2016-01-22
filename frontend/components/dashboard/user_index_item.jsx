@@ -25,7 +25,7 @@ UserIndexListItem = React.createClass({
     }
 
     return(
-        <li onClick={this.showDetail} className="col-md-12 content">
+        <li onClick={this.showDetail} className="col-md-12 content list-group-item">
           {output}
         </li>
     );

@@ -6,10 +6,8 @@ EventItem = React.createClass({
 
     return (
       <li className="event-index-item event-item">
-        <p>{_event.event_date}
-           {_event.lender_username}
-           {_event.description}
-          ${(_event.dollar_amt)/100}</p>
+          You paid ${(_event.dollar_amt)/100} <br />
+           for {_event.description} on {_event.event_date}
       </li>
     );
   }
