@@ -31,7 +31,7 @@ SessionForm = React.createClass({
     this.sessionListener.remove();
   },
   getInitialState: function () {
-    return {username: "username", password: "", textStyle: this.__textStyleBlur };
+    return {username: "", password: "", textStyle: this.__textStyleBlur };
   },
   render: function() {
 
@@ -43,26 +43,25 @@ SessionForm = React.createClass({
               <h1>Login</h1>
 
               <form>
-                <label htmlFor="user_username">Username</label>
-                <input
-                  type="text"
-                  style={ this.state.textStyle }
-                  onFocus={ this._textFocus.bind(this, {username: this.state.username}) }
-                  onBlur={ this._textBlur.bind(this, {username: "username"}) }
-                  valueLink={this.linkState("username")}
-                  id="user_username" />
-
-                <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">Username</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                <div className="input-group">
+                  <span className="input-group-addon" id="basic-addon1">
+                    <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
+                  </span>
+                  <input type="text" className="form-control" placeholder="username"
+                    aria-describedby="basic-addon1"
+                    valueLink={this.linkState("username")}
+                     />
                 </div>
 
-                <label htmlFor="user_password">Password</label>
-                <input
-                  type="password"
-                  name="user[password]"
-                  valueLink={this.linkState("password")}
-                  id="user_password" />
+                <div className="input-group">
+                  <span className="input-group-addon" id="basic-addon1">
+                    <span className="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                  </span>
+                  <input type="password" className="form-control" placeholder="password"
+                    aria-describedby="basic-addon1"
+                    valueLink={this.linkState("password")}
+                     />
+                </div>
 
                 <input onClick={ this._handleSubmit }
                   type="submit" />
