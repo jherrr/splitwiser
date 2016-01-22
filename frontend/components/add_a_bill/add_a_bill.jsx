@@ -222,6 +222,7 @@ AddABill = React.createClass({
       </ul>
     )
 
+    // bootstrap modal
     return(
       <div id="add-a-bill">
         <section id="myModal" className="modal fade">

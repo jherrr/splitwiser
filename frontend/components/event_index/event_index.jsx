@@ -30,10 +30,12 @@ var EventIndex = React.createClass({
     });
 
     return(
-      <div id="event-index">
-        <ul id="list-items">
-          {listItems}
-        </ul>
+      <div className="col-md-12 index-container">
+        <div className="row event-panel">
+          <ul id="list-items">
+            {listItems}
+          </ul>
+        </div>
       </div>
     );
   }

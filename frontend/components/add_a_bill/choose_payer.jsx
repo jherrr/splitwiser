@@ -5,7 +5,7 @@ var ChoosePayer = React.createClass({
     return { users: [], selectedIdx: 0 };
   },
   handleClick: function () {
-    debugger;
+    
   },
   componentDidMount: function () {
     var selectedIdx = 0;

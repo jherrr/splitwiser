@@ -36,28 +36,38 @@ SessionForm = React.createClass({
   render: function() {
 
     return (
-      <div>
-        <h1>Login</h1>
+      <div className="log-in-background-container">
+        <div className="session-form-container container">
+          <h1>Login</h1>
 
-        <form>
-          <label htmlFor="user_username">Username</label>
-          <input
-            type="text"
-            style={ this.state.textStyle }
-            onFocus={ this._textFocus.bind(this, {username: this.state.username}) }
-            onBlur={ this._textBlur.bind(this, {username: "username"}) }
-            valueLink={this.linkState("username")}
-            id="user_username" />
+          <form>
+            <div className="row">
+              <div className="col-md-offset-1 col-md-5">
+                <label htmlFor="user_username">Username</label>
+                <input
+                  type="text"
+                  style={ this.state.textStyle }
+                  onFocus={ this._textFocus.bind(this, {username: this.state.username}) }
+                  onBlur={ this._textBlur.bind(this, {username: "username"}) }
+                  valueLink={this.linkState("username")}
+                  id="user_username" />
+              </div>
+            </div>
 
-          <label htmlFor="user_password">Password</label>
-          <input
-            type="password"
-            name="user[password]"
-            valueLink={this.linkState("password")}
-            id="user_password" />
+          <div className="row">
+            <div className="col-md-offset-1 col-md-5">
+              <label htmlFor="user_password">Password</label>
+              <input
+                type="password"
+                name="user[password]"
+                valueLink={this.linkState("password")}
+                id="user_password" />
+            </div>
+          </div>
 
-          <input onClick={ this._handleSubmit } type="submit" />
-        </form>
+            <input onClick={ this._handleSubmit } type="submit" />
+          </form>
+        </div>
       </div>
 
     );

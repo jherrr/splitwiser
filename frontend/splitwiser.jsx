@@ -22,14 +22,19 @@ var SessionStore = require('./stores/session');
 
 var AppConstants = require('./constants/app_constants');
 
+var AddABill = require('./components/add_a_bill/add_a_bill');
+var AddATransaction = require('./components/add_a_transaction/add_a_transaction');
+
 var App = React.createClass({
   getInitialState: function() {
     return {viewType: AppConstants.ALL_EXPENSES};
   },
   render: function(){
     return (
-      <div id="app" className="container">
+      <div id="app">
         <header><h1>AllSet</h1></header>
+        <AddATransaction />
+        <AddABill />
         {this.props.children}
       </div>
     );
@@ -39,7 +44,7 @@ var App = React.createClass({
 var preventIfLoggedIn = function (nextState, replaceState) {
 
   if ( window.user_id === undefined && window.username === undefined ) {
-    replaceState(null, "/new_session");
+    replaceState(null, "/");
   }
 };
 
@@ -50,7 +55,7 @@ var routes = (
       <Route path="app" component={App}>
         <Route path='dashboard' component={DashBoard} onEnter={ preventIfLoggedIn } />
       </Route>
-      <Route path='new_session' component={SessionForm} />
+      <IndexRoute component={SessionForm} />
     </Route>
   </Router>
 

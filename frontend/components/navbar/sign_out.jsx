@@ -10,7 +10,7 @@ SignOut = React.createClass({
 
     return (
         <li>
-          <a href="#/new_session" onClick={this._handleSignOut}>Sign Out</a>
+          <a href="/" onClick={this._handleSignOut}>Sign Out</a>
         </li>
     );
   }

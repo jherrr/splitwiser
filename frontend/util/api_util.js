@@ -48,7 +48,7 @@ ApiUtil = {
     $.ajax({
       url: "api/user_data",
       success: function (users) {
-        debugger;
+        // 
         UserActions.receiveAllUsers(users);
       }
     });
@@ -150,7 +150,7 @@ ApiUtil = {
     $.ajax({
       url: "api/event_splits/" + user_id,
       success: function (eventSplits) {
-        debugger;
+        
         IndexActions.receiveAllEventSplits(eventSplits);
       }
     });

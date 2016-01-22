@@ -5,7 +5,7 @@ var SignOut = require('./sign_out');
 var NavBar = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -14,13 +14,18 @@ var NavBar = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Brand</a>
+            <a className="navbar-brand" href="#">AllSet!</a>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li className="active" data-toggle="modal" data-target="#myModal">Add A Bill</li>
-              <li data-toggle="modal" data-target="#transaction-modal">Pay What You Paid Back</li>
+              <li>
+                <a href='#' className="active" data-toggle="modal" data-target="#myModal">
+                Add A Bill</a></li>
+              <li>
+                <a href='#' data-toggle="modal" data-target="#transaction-modal">
+                Pay Back
+              </a></li>
 
             </ul>
 

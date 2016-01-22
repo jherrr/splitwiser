@@ -45,24 +45,26 @@ var BalanceBook = React.createClass({
     lended_amt = this.___formatMoneyDisplay(lended_amt);
 
     return (
-      <div id="balance-book" className="row">
-        <div className="col-md-4 col-sm-4 balance-item">
-          <p>
-            Balance:
-            ${balance}
-          </p>
-        </div>
-        <div className="col-md-4 col-sm-4 balance-item balance-middle">
-          <p>
-            Lended Amount:
-            ${lended_amt}
-          </p>
-        </div>
-        <div className="col-md-4 col-sm-4 balance-item">
-          <p>
-            Owed Amount:
-            ${owed_amt}
-          </p>
+      <div id="balance-book" className="col-xs-12 col-md-12">
+        <div className="row">
+          <div className="col-md-4 col-sm-4 balance-item">
+            <p>
+              Balance:
+              ${balance}
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-4 balance-item balance-middle">
+            <p>
+              Lended Amount:
+              ${lended_amt}
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-4 balance-item">
+            <p>
+              Owed Amount:
+              ${owed_amt}
+            </p>
+          </div>
         </div>
       </div>
     );

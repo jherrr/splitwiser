@@ -12,20 +12,22 @@ UserIndexListItem = React.createClass({
 
     var balance = userOwed - userOwes
     var output = "";
-    var username = this.props.user.username;
-
+    var username = (<strong>{this.props.user.username}</strong>);
+    var amount = (Math.abs((balance/parseFloat(100)))).toFixed(2).toString();
     if ( balance > 0 ) {
-      output = "You owe " + username + " $" + (Math.abs((balance/parseFloat(100)))).toFixed(2);
+      output = (<p>
+        You owe {username} <span className="negative-amt">${amount}</span>
+      </p>)
     } else if ( balance < 0 ) {
-      output = username + " owes you $" + (Math.abs((balance/parseFloat(100)))).toFixed(2);
+      output = (<p>
+        {username} owes you <span className="positive-amt">${amount}</span>
+      </p>)
     }
 
     return(
-      <div className="row">
-        <li onClick={this.showDetail} className="col-md-4 col-sm-4 content">
-          <p> {output} </p>
+        <li onClick={this.showDetail} className="col-md-12 content">
+          {output}
         </li>
-      </div>
     );
   }
 });

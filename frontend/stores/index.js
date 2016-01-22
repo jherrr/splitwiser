@@ -61,7 +61,7 @@ var _merge = function (arr1, arr2) {
 };
 
 IndexStore.__onDispatch = function (payload) {
-  debugger;
+  
   switch(payload.actionType) {
     case IndexConstants.EVENTS_RECEIVED:
       resetEvents(payload.events);
