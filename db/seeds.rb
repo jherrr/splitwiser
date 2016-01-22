@@ -6,6 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+User.destroy_all
+Event.destroy_all
+EventSplit.destroy_all
+Transaction.destroy_all
+
 Users = User.create([{id: 1, username: 'Jeff', password: 'password', email: 'jeffher@gmail.com'},
                     {id: 2, username: 'Colin', password: 'password', email: 'collinchen@gmail.com'},
                     {id: 3, username: 'Byron', password: 'password', email: 'byronsha@gmail.com'},
@@ -472,3 +478,8 @@ Balances = Balance.create([
     associate_id: 1
   }
 ])
+
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('events')
+ActiveRecord::Base.connection.reset_pk_sequence!('event_splits')
+ActiveRecord::Base.connection.reset_pk_sequence!('transactions')
