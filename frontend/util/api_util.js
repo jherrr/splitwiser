@@ -48,7 +48,7 @@ ApiUtil = {
     $.ajax({
       url: "api/user_data",
       success: function (users) {
-        // 
+        //
         UserActions.receiveAllUsers(users);
       }
     });
@@ -129,6 +129,17 @@ ApiUtil = {
       }
     });
   },
+  createGuestSession: function ( ) {
+    $.ajax({
+      url: "api/guest_session",
+      method: "GET",
+      success: function ( sessionData ) {
+        window.user_id = sessionData.id;
+        window.username = sessionData.username;
+        SessionActions.receiveSession( sessionData );
+      }
+    });
+  },
   destroySession: function () {
     $.ajax({
       url: "api/session",
@@ -150,7 +161,7 @@ ApiUtil = {
     $.ajax({
       url: "api/event_splits/" + user_id,
       success: function (eventSplits) {
-        
+
         IndexActions.receiveAllEventSplits(eventSplits);
       }
     });

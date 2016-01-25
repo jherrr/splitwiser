@@ -18,6 +18,11 @@ SessionForm = React.createClass({
 
     ApiUtil.createNewSession ( output );
   },
+  _handleGuestSubmit: function ( e ) {
+    e.preventDefault();
+
+    ApiUtil.createGuestSession();
+  },
   __blankAttrs: {
     username: "username"
   },
@@ -62,6 +67,10 @@ SessionForm = React.createClass({
                     valueLink={this.linkState("password")}
                      />
                 </div>
+
+                <button className="btn" onClick={this._handleGuestSubmit}>
+                  Sign in as Guest
+                </button>
 
                 <input onClick={ this._handleSubmit }
                   type="submit" />

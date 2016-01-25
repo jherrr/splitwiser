@@ -37,8 +37,24 @@ class Api::SessionsController < ApplicationController
     user = User.find_by id: guest_id
     login_user!(user)
 
-    @output = {authenticated: false}
-    render json: @output
+    @output = {}
+
+    if user.nil?
+      @output = {
+        authenticated: false,
+      }
+
+      render json: @output
+    else
+      @output = {
+        authenticated: true,
+        username: user.username,
+        id: user.id
+      }
+
+      login_user!(user)
+      render json: @output
+    end
   end
 
 end

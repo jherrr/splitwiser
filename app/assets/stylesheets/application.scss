@@ -90,6 +90,7 @@
     font: helvetica, sans-serif;
     // color: rgba(255, 255, 255, 0.9);
     background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 5px #888888;
   }
 
   #balance-book {
@@ -100,7 +101,7 @@
   }
 
   .balance-item {
-    font: helvetica, sans-serif;
+    font: helvetica sans-serif;
     color: rgba(0, 0, 0, 1);
     background-color: rgba(255, 255, 255, 0.5);
     border-top: solid;
@@ -213,6 +214,7 @@
   border-top: solid;
   border-color: #a4a4c1;
   border-width: 1px;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .background-container {
@@ -323,4 +325,5 @@ input {
   border: solid;
   border-width: 1px;
   border-color: rgb(112, 219, 112);
+  box-shadow: 5px 5px 5px #888888;
 }

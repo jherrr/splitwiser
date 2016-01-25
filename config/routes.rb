@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'owed_amount/:id', to: "event_splits#owed_amount_current_user"
     get 'lended_amount_user/:id', to: "events#lended_amount"
     get 'owed_amount_user/:id', to: "events#owed_amount"
+    get 'guest_session', to: "sessions#new_guest_session"
 
     resource :session, only: [:create, :destroy]
     resources :user_data, only: [:index]
