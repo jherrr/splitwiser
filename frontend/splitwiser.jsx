@@ -24,6 +24,7 @@ var AppConstants = require('./constants/app_constants');
 
 var AddABill = require('./components/add_a_bill/add_a_bill');
 var AddATransaction = require('./components/add_a_transaction/add_a_transaction');
+var HomePage = require('./components/session/home_page');
 
 var App = React.createClass({
   getInitialState: function() {
@@ -55,7 +56,7 @@ var routes = (
       <Route path="app" component={App}>
         <Route path='dashboard' component={DashBoard} onEnter={ preventIfLoggedIn } />
       </Route>
-      <IndexRoute component={SessionForm} />
+      <IndexRoute component={HomePage} />
     </Route>
   </Router>
 

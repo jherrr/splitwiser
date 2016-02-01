@@ -6,10 +6,8 @@ var SessionStore = require('../../stores/session');
 
 var ApiUtil = require('../../util/api_util');
 
-var TextInputMixin = require('../../mixins/text_input');
-
 SessionForm = React.createClass({
-  mixins: [LinkedStateMixin, TextInputMixin, History],
+  mixins: [LinkedStateMixin, History],
   _handleSubmit: function ( e ) {
     e.preventDefault();
 
@@ -36,51 +34,65 @@ SessionForm = React.createClass({
     this.sessionListener.remove();
   },
   getInitialState: function () {
-    return {username: "", password: "", textStyle: this.__textStyleBlur };
+    return { username: "", password: "" };
   },
   render: function() {
 
     return (
-      <div className="log-in-background-container">
         <div className="login-overlay">
-          <div className="session-form-container row">
-            <div className='col-md-offset-1 col-md-5'>
-              <h1>Login</h1>
+
+          <div className="row session-form">
+            <div className='col-md-offset-1 col-md-10 session-form-content'>
 
               <form>
-                <div className="input-group">
+                <div className="input-group session-group">
                   <span className="input-group-addon" id="basic-addon1">
                     <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
                   </span>
-                  <input type="text" className="form-control" placeholder="username"
+                  <input type="text" className="form-control session-input" placeholder="username"
                     aria-describedby="basic-addon1"
                     valueLink={this.linkState("username")}
-                     />
+                    />
                 </div>
 
-                <div className="input-group">
+                <div className="input-group session-group">
                   <span className="input-group-addon" id="basic-addon1">
                     <span className="glyphicon glyphicon-lock" aria-hidden="true"></span>
                   </span>
-                  <input type="password" className="form-control" placeholder="password"
+                  <input type="password" className="form-control session-input" placeholder="password"
                     aria-describedby="basic-addon1"
                     valueLink={this.linkState("password")}
-                     />
+                    />
                 </div>
 
-                <button className="btn" onClick={this._handleGuestSubmit}>
-                  Sign in as Guest
-                </button>
-
-                <input onClick={ this._handleSubmit }
-                  type="submit" />
               </form>
 
             </div>
           </div>
-        </div>
-      </div>
 
+          <div className="row session-row">
+            <div className='col-md-offset-1 col-md-10 session-row-content'
+              onClick={ this._handleSubmit } data-dismiss="modal">
+              Sign In
+            </div>
+          </div>
+
+          <div className="row session-row">
+            <div className='col-md-offset-1 col-md-10 session-row-content'
+              data-dismiss="modal">
+              Create new account
+            </div>
+          </div>
+
+          <div className="row session-row">
+            <div className='col-md-offset-1 col-md-10 session-row-content'
+              onClick={ this._handleGuestSubmit }
+              data-dismiss="modal" >
+              Sign into demo account!
+            </div>
+          </div>
+
+        </div>
     );
   }
 });
