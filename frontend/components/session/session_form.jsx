@@ -41,6 +41,8 @@ SessionForm = React.createClass({
     return (
         <div className="login-overlay">
 
+          <div className="session-form-spacing" />
+
           <div className="row session-form">
             <div className='col-md-offset-1 col-md-10 session-form-content'>
 

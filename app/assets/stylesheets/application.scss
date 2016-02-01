@@ -311,14 +311,8 @@ input {
 }
 
 .login-overlay{
-  position: absolute;
-  // top: calc(50% - 100px - 5vh);
-  top: 50px;
-  left: calc(45% - 150px - 5vw);
   width: calc(370px + 10vw);
   height: calc(290px + 10vh);
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
 }
 
 .session-input {
@@ -368,8 +362,43 @@ input {
 
 .session-modal-content {
   border: none;
+  position: relative;
+  top: 50px;
+  left: calc(45% - 150px - 5vw);
+  width: calc(370px + 10vw);
+  height: calc(290px + 10vh);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 .homepage-content {
-  font-weight: 300;
+  font-family: Arial, sans-sarif;
+  font-weight: 700;
+  font-size: x-large;
+
+  color: white;
+  background-color: rgba( 0, 0, 0, 0.6);
+  border-radius: 7px 0px 0px 7px;
+  height: calc(250px + 5vh);
+  width: 100%;
+  position: absolute;
+  padding-left: 2%;
+  left: calc(40% - 150px - 5vw);
+  top: calc(45% - 150px - 5vh);
+}
+
+.session-form-spacing{
+  height: 1px;
+}
+
+.homepage-heading1 {
+  font-weight: 700;
+}
+
+.homepage-heading2 {
+  font-weight: 700;
+}
+
+.homepage-spacing {
+  height: 5px;
 }
