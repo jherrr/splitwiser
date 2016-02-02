@@ -213,7 +213,7 @@ AddABill = React.createClass({
     }
 
     var listOfParticipants = (
-      <ul className='list-of-participants'>
+      <ul id="jeff" className='list-of-participants'>
         {
           this.state.participants.map ( function( participant ) {
             return ( <li className="row" key={participant.id} >
@@ -242,16 +242,34 @@ AddABill = React.createClass({
             <PayerAutoComplete currentUsername={this.state.payer.username} users={this.state.users} autoCallback={this._selectPayer} />
 
             <form className='new-bill' onSubmit={this.createBill}>
-              <label htmlFor='bill-event-description-type' className='add-bill-input-label'>Description</label>
-              <input type='text' id='bill-event-description-type' className="add-bill-input"
-                valueLink={this.linkState("description")} />
+              <div className="row bill-description">
+                <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+                  <span className="input-group-addon" id="basic-addon4">
+                    <span className="glyphicon glyphicon-list" aria-hidden="true"></span>
+                  </span>
+                  <input type="text" className="form-control session-input"
+                    placeholder="Description"
+                    aria-describedby="basic-addon1"
+                    valueLink={this.linkState("description")}
+                    />
+                </div>
+              </div>
 
-              <label htmlFor='bill-dollar-amt' className='add-bill-input-label'>Bill Amount</label>
-              <input type='text' id='bill-dollar-amt' className="add-bill-input"
-                onChange={this._handleDollarAmt} onBlur={this._formatDollarAmt} value={this.state.dollar_amt} />
+              <div className="row bill-amt">
+                <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+                  <span className="input-group-addon" id="basic-addon5">
+                    <span className="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                  </span>
+                  <input type="text" className="form-control session-input"
+                    placeholder="Bill Amount"
+                    aria-describedby="basic-addon1"
+                    onChange={this._handleDollarAmt}
+                    onBlur={this._formatDollarAmt}
+                    value={this.state.dollar_amt}
+                    />
+                </div>
+              </div>
 
-              <br />
-              <label htmlFor='bill-date-picker' className="add-bill-input-label">Date</label>
               <DatePicker id='bill-date-picker' dateCallback={this._handleDate}></DatePicker>
             </form>
 

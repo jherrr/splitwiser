@@ -76,25 +76,29 @@ var AutoComplete = React.createClass({
 
     }
 
-    <div className="row">
-      <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
-        <span className="input-group-addon" id="basic-addon2">
-          <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </span>
-        <input type="text" className="form-control session-input"
-          placeholder="Paid by {this.state.inputVal}"
-          aria-describedby="basic-addon1"
-          onChange={this.handleInput} value={this.state.inputVal}
-            onKeyDown={ this.handleKey }
-          />
-      </div>
-    </div>
+
 
     display = (
-      <div className="col-md-12 col-sm-12">
-          <label htmlFor='search-bar' className='add-bill-input-label'>Paid By</label>
-          <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
-            onKeyDown={ this.handleKey } className="add-bill-input" />
+      <div>
+        <div className="row">
+          <div className="payer-header col-sm-offset-1 col-md-offset-1 col-md-10 col-sm10">
+            Paid By:
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+            <span className="input-group-addon payer-addon" id="basic-addon3">
+              <span className="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+            </span>
+            <input type="text" className="form-control session-input payer-input"
+              placeholder="Payer"
+              aria-describedby="basic-addon1"
+              onChange={this.handleInput} value={this.state.inputVal}
+                onKeyDown={ this.handleKey }
+              />
+          </div>
+        </div>
+
           <ul id="search-bar-drop-down">
             {
               intermediate
@@ -113,11 +117,7 @@ var AutoComplete = React.createClass({
     var display = this.display_matches();
 
     return(
-      <div className="row">
-        {
-          display
-        }
-      </div>
+      display
     );
   }
 });

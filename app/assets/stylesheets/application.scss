@@ -448,3 +448,24 @@
   margin-left: 10px;
   margin-top: 5px;
 }
+
+.payer-header {
+  background-color: #ccddff;
+  border: 1px solid #3376ff;
+  height: 30px;
+  padding-top: 4px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.payer-addon {
+  border-radius: 0px 0px 0px 5px;
+}
+
+.payer-input {
+  border-radius: 0px 0px 5px 0px
+}
+
+.bill-description {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

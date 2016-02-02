@@ -43,24 +43,28 @@ var DatePicker = React.createClass({
                    var formattedDateStr = dateComponent._getFormattedDateStr(date);
                    dateComponent.props.dateCallback( formattedDateStr );
            },
-           showOn: 'button',
-           buttonText: 'Show Date',
-           buttonImageOnly: true,
-           buttonImage: 'http://i1375.photobucket.com/albums/ag446/eowyn_g/Work/icon_calendar_zpse819d8d4.gif'
+          //  showOn: 'button',
+          //  buttonText: 'Show Date',
+          //  buttonImageOnly: true,
+          //  buttonImage: 'http://i1375.photobucket.com/albums/ag446/eowyn_g/Work/icon_calendar_zpse819d8d4.gif'
           // , minDate: minDate
        });
-       $(".ui-datepicker-trigger").each(function (index){
-           $(this).insertBefore( $(this).prev('input') );
-       });
+      //  $(".ui-datepicker-trigger").each(function (index){
+      //      $(this).insertBefore( $(this).prev('input') );
+      //  });
        $("#" + textBoxId).datepicker('setDate',  new Date());
+
    },
    render: function() {
-       console.log("render datepicker");
+
        return (
-           <div >
-               <input type='text' id="TextBox" onBlur={this.handleDatePickerChange}/>
-           </div>
-           );
+         <div className="row bill-amt">
+           <input
+             type='text'
+             className="col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10"
+             id="TextBox" onBlur={this.handleDatePickerChange}/>
+         </div>
+        );
    }
 });
 
