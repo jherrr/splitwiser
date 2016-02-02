@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var UserStore = require('../../stores/user.js');
 var BalanceStore = require('../../stores/balance.js');
@@ -52,7 +53,12 @@ var UserIndex = React.createClass({
                 </strong>
             </div>
             <ul className="list-group">
-              { listItems }
+              <ReactCSSTransitionGroup
+                transitionName="example"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+                { listItems }
+              </ReactCSSTransitionGroup>
             </ul>
           </div>
         </div>

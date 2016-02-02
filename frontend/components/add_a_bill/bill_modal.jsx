@@ -14,7 +14,9 @@ var DatePicker= require('./date_picker');
 var SessionStore = require('../../stores/session');
 var UserStore = require('../../stores/user');
 
-AddABill = React.createClass({
+var AddABill = require('./add_a_bill');
+
+BillModal = React.createClass({
   mixins: [LinkedStateMixin],
   _openModal: function () {
     this.setState({modalIsOpen: true});
@@ -222,51 +224,31 @@ AddABill = React.createClass({
       </ul>
     )
 
+    // bootstrap modal
     return(
-          <div className="bill-form">
-            <ParticipantsAutoComplete users={this.state.users} autoCallback={this._addParticipant} />
-            {listOfParticipants}
+      <div id="AddABillModal" className="modal fade" role="dialog">
+        <div className="modal-dialog">
 
-            <PayerAutoComplete currentUsername={this.state.payer.username} users={this.state.users} autoCallback={this._selectPayer} />
-
-            <form className='new-bill' onSubmit={this.createBill}>
-              <label htmlFor='bill-event-description-type' className='add-bill-input-label'>Description</label>
-              <input type='text' id='bill-event-description-type' className="add-bill-input"
-                valueLink={this.linkState("description")} />
-
-              <label htmlFor='bill-dollar-amt' className='add-bill-input-label'>Bill Amount</label>
-              <input type='text' id='bill-dollar-amt' className="add-bill-input"
-                onChange={this._handleDollarAmt} onBlur={this._formatDollarAmt} value={this.state.dollar_amt} />
-
-              <br />
-              <label htmlFor='bill-date-picker' className="add-bill-input-label">Date</label>
-              <DatePicker id='bill-date-picker' dateCallback={this._handleDate}></DatePicker>
-            </form>
-
-            <div className='row'>
-              <label htmlFor='sub-modal-button'>Split: </label>
-              <button className="btn button-small" id="sub-modal-button"
-                onClick={this._toggleSubModal}>{this.state.splitType}</button>
+          <div className="modal-content">
+            <div className="modal-header">
+              <button type="button" className="close" data-dismiss="modal">&times;</button>
+              <h4 className="modal-title">Add A Bill</h4>
             </div>
+            <div className="modal-body">
 
-            <button className="btn button-small" onClick={this._handleSave} data-dismiss="modal">
-              Save</button>
-            <button type="button" className="btn button-small" data-dismiss="modal">cancel</button>
+              <AddABill/>
 
-            <article className="modal-content myModal-content col-sm-12 col-md-12" style={hiddenStyle} >
-              <div>
-                <button type="button" className="button-split-type btn-primary">Equally</button>
-                <button type="button" className="button-split-type btn-primary">Percentage</button>
-                <button type="button" className="button-split-type btn-primary">Exact Amounts</button>
-              </div>
-              <SplitOptions participants={this.state.participants} dollar_amt={this.state.dollar_amt}
-                splitType={this.state.splitType} />
-              <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
-            </article>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
+
+        </div>
+      </div>
     );
   }
 
 });
 
-module.exports = AddABill;
+module.exports = BillModal;

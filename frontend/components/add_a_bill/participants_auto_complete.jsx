@@ -61,31 +61,48 @@ var AutoComplete = React.createClass({
     var users = this.state.users;
     var intermediate;
     var searchBarDropDownStyle = {}
+    var list;
 
     if (users.length > 0) {
       intermediate = users.map(function (result, i) {
-          var style = {};
+          var styleLi = {};
           if ( i === this.state.selectedItemIdx ) {
-            style = { background: "#ccc" }
+            styleLi = { background: "#f2f2f2" }
           }
 
           return <li className="search-bar-item" key={i} data-userid={result.id}
-          style={style} >
-          {result.username} </ li> ;
+            style={styleLi} >
+              <span className="col-md-offset-1 col-sm-offset-1">{result.username}</span>
+            </li> ;
           }.bind(this));
 
+      list = <ul id="search-bar-drop-down"
+        className="col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+        {
+          intermediate
+        }
+      </ul>
     }
 
     display = (
-      <div className="col-md-12 col-sm-12">
-          <label htmlFor='search-bar' className='add-bill-input-label'>Add Participants</label>
-          <input id="search-bar" onChange={this.handleInput} value={this.state.inputVal}
-            onKeyDown={ this.handleKey } className="add-bill-input" />
-          <ul id="search-bar-drop-down">
-            {
-              intermediate
-            }
-          </ ul>
+      <div>
+        <div className="row">
+          <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+            <span className="input-group-addon" id="basic-addon2">
+              <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </span>
+            <input type="text" className="form-control session-input" placeholder="add a participant"
+              aria-describedby="basic-addon1"
+              onChange={this.handleInput} value={this.state.inputVal}
+                onKeyDown={ this.handleKey }
+              />
+          </div>
+        </div>
+        <div className="row">
+          {
+            list
+          }
+        </div>
       </div>
     );
 
@@ -99,12 +116,7 @@ var AutoComplete = React.createClass({
     var display = this.display_matches();
 
     return(
-      <div className="row">
-
-        {
-          display
-        }
-      </div>
+        display
     );
   }
 });
