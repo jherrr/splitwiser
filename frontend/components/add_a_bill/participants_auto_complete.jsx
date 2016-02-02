@@ -72,7 +72,9 @@ var AutoComplete = React.createClass({
 
           return <li className="search-bar-item" key={i} data-userid={result.id}
             style={styleLi} >
-              <span className="col-md-offset-1 col-sm-offset-1">{result.username}</span>
+              <span
+                className="col-md-offset-1 col-sm-offset-1">
+                {result.username}</span>
             </li> ;
           }.bind(this));
 
@@ -89,7 +91,7 @@ var AutoComplete = React.createClass({
         <div className="row">
           <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
             <span className="input-group-addon" id="basic-addon2">
-              <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
             </span>
             <input type="text" className="form-control session-input" placeholder="add a participant"
               aria-describedby="basic-addon1"

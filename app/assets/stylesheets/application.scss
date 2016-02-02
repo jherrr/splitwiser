@@ -53,6 +53,7 @@
      z-index: 1;
      box-shadow: 5px 8px 5px 0 #888888;
      border: 1px solid #ccc;
+     border-radius: 1px 1px 5px 5px;
    }
 
    .search-bar {
@@ -413,4 +414,37 @@
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.participant-item {
+  border: 1px solid #ccc;
+  height: 30px;
+  padding-top: 3px;
+}
+
+.participant-header {
+  height: 30px;
+  padding-top: 3px;
+  font-size: medium;
+  border: 1px solid #70db70;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: 5px;
+  background-color: #dff0d8;
+}
+
+.list-of-participants {
+  margin-bottom: 10px;
+}
+
+.modal-header.bill-modal-header {
+  padding: 10px 15px;
+}
+
+.close.bill-modal-close {
+  font-size: xx-large;
+}
+
+.modal-title.bill-modal-title {
+  margin-left: 10px;
+  margin-top: 5px;
 }

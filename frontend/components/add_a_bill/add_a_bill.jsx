@@ -213,10 +213,15 @@ AddABill = React.createClass({
     }
 
     var listOfParticipants = (
-      <ul id='list-of-participants'>
+      <ul className='list-of-participants'>
         {
           this.state.participants.map ( function( participant ) {
-            return ( <li key={participant.id} > {participant.username} </li> );
+            return ( <li className="row" key={participant.id} >
+                <div
+                  className="participant-item col-md-offset-1 col-sm-offset-1 col-md-10 col-sm-10">
+                    {participant.username}
+                </div>
+              </li> );
           })
         }
       </ul>
@@ -225,6 +230,13 @@ AddABill = React.createClass({
     return(
           <div className="bill-form">
             <ParticipantsAutoComplete users={this.state.users} autoCallback={this._addParticipant} />
+            <div className="row">
+              <div
+                className="participant-header col-md-offset-1 col-sm-offset-1
+                col-md-10 col-sm-10">
+                Participants:
+              </div>
+            </div>
             {listOfParticipants}
 
             <PayerAutoComplete currentUsername={this.state.payer.username} users={this.state.users} autoCallback={this._selectPayer} />

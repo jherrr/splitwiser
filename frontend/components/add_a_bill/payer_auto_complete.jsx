@@ -76,6 +76,20 @@ var AutoComplete = React.createClass({
 
     }
 
+    <div className="row">
+      <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+        <span className="input-group-addon" id="basic-addon2">
+          <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </span>
+        <input type="text" className="form-control session-input"
+          placeholder="Paid by {this.state.inputVal}"
+          aria-describedby="basic-addon1"
+          onChange={this.handleInput} value={this.state.inputVal}
+            onKeyDown={ this.handleKey }
+          />
+      </div>
+    </div>
+
     display = (
       <div className="col-md-12 col-sm-12">
           <label htmlFor='search-bar' className='add-bill-input-label'>Paid By</label>
