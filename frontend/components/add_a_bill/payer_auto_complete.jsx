@@ -60,20 +60,31 @@ var AutoComplete = React.createClass({
   display_matches: function () {
     var users = this.state.users;
     var intermediate;
-    var searchBarDropDownStyle = {}
+    var list;
 
     if (users.length > 0) {
       intermediate = users.map(function (result, i) {
           var style = {};
           if ( i === this.state.selectedItemIdx ) {
-            style = { background: "#ccc" }
+            style = { background: "#f2f2f2" }
           }
 
           return <li className="search-bar-item" key={i} data-userid={result.id}
           style={style} >
-          {result.username} </ li> ;
+            <span
+              className="col-md-offset-1 col-sm-offset-1 col-xs-1">
+              {result.username}</span>
+          </ li> ;
           }.bind(this));
 
+          list = <ul
+            id="search-bar-drop-down"
+            className="col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+             col-md-10 col-sm-10 col-xs-10">
+            {
+              intermediate
+            }
+          </ul>
     }
 
 
@@ -81,12 +92,15 @@ var AutoComplete = React.createClass({
     display = (
       <div>
         <div className="row">
-          <div className="payer-header col-sm-offset-1 col-md-offset-1 col-md-10 col-sm10">
+          <div
+            className="payer-header col-sm-offset-1 col-xs-offset-1
+             col-md-offset-1 col-md-10 col-sm-10 col-xs-10">
             Paid By:
           </div>
         </div>
         <div className="row">
-          <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+          <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+             col-md-10 col-sm-10 col-xs-10">
             <span className="input-group-addon payer-addon" id="basic-addon3">
               <span className="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
             </span>
@@ -99,11 +113,11 @@ var AutoComplete = React.createClass({
           </div>
         </div>
 
-          <ul id="search-bar-drop-down">
-            {
-              intermediate
-            }
-          </ ul>
+        <div className="row">
+          {
+            list
+          }
+        </div>
       </div>
     );
 

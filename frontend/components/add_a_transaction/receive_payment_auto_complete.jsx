@@ -53,32 +53,62 @@ var AutoComplete = React.createClass({
   display_matches: function () {
     var users = this.state.users;
     var intermediate;
-    var searchBarDropDownStyle = {}
+    var list;
 
     if (users.length > 0) {
       intermediate = users.map(function (result, i) {
           var style = {};
           if ( i === this.state.selectedItemIdx ) {
-            style = { background: "#ccc" }
+            style = { background: "#f2f2f2" }
           }
 
           return <li className="search-bar-item" key={i} data-userid={result.id}
           style={style} >
-          {result.username} </ li> ;
+            <span
+              className="col-md-offset-1 col-sm-offset-1 col-xs-1">
+              {result.username}</span>
+          </ li> ;
           }.bind(this));
 
-    }
-
-    display = (
-      <div className="col-md-12 col-sm-12">
-          <label htmlFor='search-bar' className='add-bill-input-label'>Paid By</label>
-          <input className="search-bar" onChange={this.handleInput} value={this.state.inputVal}
-            onKeyDown={ this.handleKey } className="add-bill-input" />
-          <ul id="search-bar-drop-down">
+          list = <ul
+            id="search-bar-drop-down"
+            className="col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+             col-md-10 col-sm-10 col-xs-10">
             {
               intermediate
             }
-          </ ul>
+          </ul>
+    }
+
+    display = (
+      <div>
+        <div className="row">
+          <div
+            className="payer-header col-sm-offset-1 col-xs-offset-1
+             col-md-offset-1 col-md-10 col-sm-10 col-xs-10">
+             You Will Pay:
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+             col-md-10 col-sm-10 col-xs-10">
+            <span className="input-group-addon payer-addon" id="basic-addon3">
+              <span className="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+            </span>
+            <input type="text" className="form-control session-input payer-input"
+              placeholder="Recipient"
+              aria-describedby="basic-addon1"
+              onChange={this.handleInput} value={this.state.inputVal}
+                onKeyDown={ this.handleKey }
+              />
+          </div>
+        </div>
+
+          <div className="row">
+            {
+              list
+            }
+          </div>
       </div>
     );
 
@@ -92,11 +122,7 @@ var AutoComplete = React.createClass({
     var display = this.display_matches();
 
     return(
-      <div className="row">
-        {
           display
-        }
-      </div>
     );
   }
 });

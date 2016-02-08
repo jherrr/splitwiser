@@ -5,6 +5,15 @@ class Api::TransactionsController < ApplicationController
     render 'index'
   end
 
+  def show
+    id = params[:id]
+
+    @transactions = Transaction.where("transactions.borrower_id = ?
+     OR transactions.lender_id = ?", id, id).includes(:lender, :borrower)
+
+    render 'show'
+  end
+
   def create
     lender_id = params[:personToBePaid][:id]
     borrower_id = params[:payer][:id]
@@ -66,13 +75,14 @@ class Api::TransactionsController < ApplicationController
 
       balance.save!
 
-      Transaction.create!(lender_id: lender_id, borrower_id: borrower_id,
+      @transaction = Transaction.create!(lender_id: lender_id, borrower_id: borrower_id,
                           dollar_amt: dollar_amt, event_date: event_date)
 
     #end of transaction
     end
 
-    render json: @balances
+    # render json: @balances
+    render 'create'
   end
 
 end

@@ -1,14 +1,16 @@
 var Store = require('flux/utils').Store;
-var AppDispatcher = require('../dispatcher/dispatcher');
+var IndexDispatcher = require('../dispatcher/index_dispatcher');
 
-var IndexStore = new Store(AppDispatcher);
+var IndexStore = new Store(IndexDispatcher);
 var IndexConstants = require('../constants/index_constants');
 
 _events = [];
 _splits = [];
+_transactions = [];
 
 IndexStore.all = function () {
   var output = _merge(_events, _splits);
+  output = _merge(output, _transactions);
 
   return output;
 };
@@ -18,6 +20,14 @@ var resetEvents = function(events) {
   events.forEach( function ( _event ) {
     _event['objType'] = 'event';
     _events.push(_event);
+  });
+};
+
+var resetTransactions = function(transactions) {
+  _transactions = [];
+  transactions.forEach( function ( transaction ) {
+    transaction['objType'] = 'transaction';
+    _transactions.push(transaction);
   });
 };
 
@@ -33,6 +43,48 @@ var resetSplits = function(splits) {
     return new Date(b.event_date).getTime()
       - new Date(a.event_date).getTime();
   });
+};
+
+var addNewEvent = function(_event) {
+  var newDate = _event.event_date;
+  _event.objType = "event";
+
+  var idx = 0;
+  while ( compareDates(_events[idx].event_date, newDate) > 0 ) {
+    idx+=1;
+  }
+
+  _events.splice(idx, 0, _event);
+};
+
+/*  I think I actually don't need to add the splits of the new event */
+// var addNewSplits = function(splits) {
+//
+//   var newDate = splits[0].event_date;
+//   var idx = 0;
+//   while ( compareDates(_splits[idx].event_date, newDate) > 0 ) {
+//     idx+=1;
+//   }
+//
+//   splits.forEach( function(split) {
+//     split.splice(idx, 0, split);
+//   });
+// };
+
+var addNewTransaction = function( transaction ) {
+  var newDate = transaction.event_date;
+  transaction.objType = "transaction";
+
+  var idx = 0;
+  while ( compareDates(_events[idx].event_date, newDate) > 0 ) {
+    idx+=1;
+  }
+
+  _transactions.splice(idx, 0, transaction);
+};
+
+var compareDates = function( date1, date2 ) {
+  return new Date(date1).getTime() - new Date(date2).getTime();
 };
 
 var _merge = function (arr1, arr2) {
@@ -61,7 +113,8 @@ var _merge = function (arr1, arr2) {
 };
 
 IndexStore.__onDispatch = function (payload) {
-  
+  debugger;
+
   switch(payload.actionType) {
     case IndexConstants.EVENTS_RECEIVED:
       resetEvents(payload.events);
@@ -71,9 +124,24 @@ IndexStore.__onDispatch = function (payload) {
       resetSplits(payload.eventSplits);
       IndexStore.__emitChange();
       break;
+    case IndexConstants.TRANSACTIONS_RECEIVED:
+      resetTransactions(payload.transactions);
+      IndexStore.__emitChange();
+      break;
+    case IndexConstants.NEW_EVENT_RECEIVED:
+      addNewEvent(payload._event);
+      IndexStore.__emitChange();
+      break;
+    case IndexConstants.NEW_TRANSACTION_RECEIVED:
+      addNewTransaction(payload.transaction);
+      IndexStore.__emitChange();
+      break;
+    /* I actually don't think I need to add the splits of a new event*/
+    // case IndexConstants.NEW_SPLITS_RECEIVED:
+    //   addNewSplits(payload.splits);
+    //   IndexStore.__emitChange();
+    //   break;
   }
 }
-
-
 
 module.exports = IndexStore;

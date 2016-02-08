@@ -23,7 +23,7 @@ var SessionStore = require('./stores/session');
 var AppConstants = require('./constants/app_constants');
 
 var BillModal = require('./components/add_a_bill/bill_modal');
-var AddATransaction = require('./components/add_a_transaction/add_a_transaction');
+var TransactionModal = require('./components/add_a_transaction/transaction_modal');
 var HomePage = require('./components/session/home_page');
 
 var App = React.createClass({
@@ -34,7 +34,7 @@ var App = React.createClass({
     return (
       <div id="app">
         <header><h1>AllSet</h1></header>
-        <AddATransaction />
+        <TransactionModal />
         <BillModal />
         {this.props.children}
       </div>

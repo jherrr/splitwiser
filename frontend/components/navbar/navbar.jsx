@@ -23,7 +23,7 @@ var NavBar = React.createClass({
                 <a href='#' data-toggle="modal" data-target="#AddABillModal">
                 Add A Bill</a></li>
               <li>
-                <a href='#' data-toggle="modal" data-target="#transaction-modal">
+                <a href='#' data-toggle="modal" data-target="#AddATransactionModal">
                 Pay Back
               </a></li>
 

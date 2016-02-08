@@ -1,8 +1,6 @@
-var TransactionActions = require('../actions/transaction_actions');
 var EventActions = require('../actions/event_actions');
 var EventSplitActions = require('../actions/event_split_actions');
 var UserActions = require('../actions/user_actions');
-var LendedAmountActions = require('../actions/lended_amount_actions');
 var CurrentUserActions = require('../actions/current_user_actions');
 
 var BalanceActions = require('../actions/balance_actions');
@@ -10,14 +8,7 @@ var SessionActions = require('../actions/session_actions');
 var IndexActions = require('../actions/index_actions');
 
 ApiUtil = {
-  fetchTransactions: function() {
-    $.ajax({
-      url: "api/transactions",
-      success: function (transactions) {
-        TransactionActions.receiveAllTransactions(transactions);
-      }
-    })
-  },
+
   fetchEvents: function() {
     $.ajax({
       url: "api/events",
@@ -104,8 +95,10 @@ ApiUtil = {
       data: data,
       success: function ( changedData ) {
         BalanceActions.receiveUpdatedBalances( changedData.balances );
-        //need to add Event Actions and EventSplitActions
 
+        IndexActions.receiveNewEvent( changedData.event );
+        /* I think I actually don't need the split action */
+        // IndexActions.receiveNewSplits( changedData.event_splits );
       }
     })
   },
@@ -117,12 +110,17 @@ ApiUtil = {
       }
     })
   },
-  createNewSession: function ( data ) {
+  createNewSession: function ( data, callback ) {
     $.ajax({
       url: "api/session/",
       method: "POST",
       data: data,
       success: function ( sessionData ) {
+        if ( !sessionData.authenticated ) {
+          window.notAuthenticated = true;
+        } else {
+          callback();
+        }
         window.user_id = sessionData.id;
         window.username = sessionData.username;
         SessionActions.receiveSession( sessionData );
@@ -165,16 +163,44 @@ ApiUtil = {
         IndexActions.receiveAllEventSplits(eventSplits);
       }
     });
+
+    $.ajax({
+      url: "api/transactions/" + user_id,
+      success: function (transactions) {
+        IndexActions.receiveAllTransactions(transactions);
+      }
+    });
   },
   createNewTransaction: function ( data ) {
     $.ajax({
       url: "api/transactions",
       method: "POST",
       data: data,
-      success: function ( stuff ) {
-        BalanceActions.receiveUpdatedBalances( stuff );
-        //need to add transaction actions
+      success: function ( transactionData ) {
+        debugger;
+        BalanceActions.receiveUpdatedBalances( transactionData.balances );
+        IndexActions.receiveNewTransaction( transactionData.transaction );
       }
+    });
+  },
+  createNewUser: function ( data, callback ) {
+    debugger;
+
+    $.ajax({
+      url: "users",
+      method: "POST",
+      data: data,
+      success: function ( sessionData ) {
+        if ( !sessionData.authenticated ) {
+          window.notAuthenticated = true;
+        } else {
+          callback();
+        }
+        window.user_id = sessionData.id;
+        window.username = sessionData.username;
+        SessionActions.receiveSession( sessionData );
+      }
+
     });
   }
 };

@@ -73,13 +73,14 @@ var AutoComplete = React.createClass({
           return <li className="search-bar-item" key={i} data-userid={result.id}
             style={styleLi} >
               <span
-                className="col-md-offset-1 col-sm-offset-1">
+                className="col-md-offset-1 col-sm-offset-1 col-xs-1">
                 {result.username}</span>
             </li> ;
           }.bind(this));
 
       list = <ul id="search-bar-drop-down"
-        className="col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+        className="col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+         col-md-10 col-sm-10 col-xs-10">
         {
           intermediate
         }
@@ -89,7 +90,8 @@ var AutoComplete = React.createClass({
     display = (
       <div>
         <div className="row">
-          <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+          <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+             col-md-10 col-sm-10 col-xs-10">
             <span className="input-group-addon" id="basic-addon2">
               <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
             </span>

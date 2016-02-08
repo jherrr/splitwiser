@@ -9,7 +9,6 @@ var PayerAutoComplete = require('./payer_auto_complete.jsx');
 
 var ChoosePayer = require('./choose_payer');
 var SplitOptions = require('./split_options');
-var DatePicker= require('./date_picker');
 
 var SessionStore = require('../../stores/session');
 var UserStore = require('../../stores/user');
@@ -18,12 +17,6 @@ var AddABill = require('./add_a_bill');
 
 BillModal = React.createClass({
   mixins: [LinkedStateMixin],
-  _openModal: function () {
-    this.setState({modalIsOpen: true});
-  },
-  _closeModal: function () {
-    this.setState({modalIsOpen: false});
-  },
   _toggleSubModal: function (e) {
     e.preventDefault();
 
@@ -201,11 +194,6 @@ BillModal = React.createClass({
   render: function () {
     var hiddenStyle = {};
 
-    var modalClass = 'modal';
-    if (this.state.modalIsOpen) {
-      modalClass += ' is-active'
-    }
-
     var subModalContentClass = "sub-modal col-sm-6 col-md-6";
     if (this.state.subModalIsOpen) {
       subModalContentClass += ' is-active'
@@ -213,16 +201,6 @@ BillModal = React.createClass({
     } else {
         hiddenStyle.display = "none";
     }
-
-    var listOfParticipants = (
-      <ul id='list-of-participants'>
-        {
-          this.state.participants.map ( function( participant ) {
-            return ( <li key={participant.id} > {participant.username} </li> );
-          })
-        }
-      </ul>
-    )
 
     // bootstrap modal
     return(
@@ -234,14 +212,11 @@ BillModal = React.createClass({
               <button type="button" className="close bill-modal-close" data-dismiss="modal">&times;</button>
               <h4 className="modal-title bill-modal-title">Add A Bill</h4>
             </div>
-            <div className="modal-body">
 
-              <AddABill/>
 
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+            <AddABill/>
+
+
           </div>
 
         </div>

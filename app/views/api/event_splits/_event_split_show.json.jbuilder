@@ -1,6 +1,7 @@
 json.extract! event_split, :dollar_amt
 json.username event_split.user.username
 json.user_id event_split.user.id
+json.split_id event_split.id
 
 json.event_amt event_split.event.dollar_amt
 json.event_owner_id event_split.event.lender.id

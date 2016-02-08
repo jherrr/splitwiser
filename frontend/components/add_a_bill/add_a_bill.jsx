@@ -9,7 +9,7 @@ var PayerAutoComplete = require('./payer_auto_complete.jsx');
 
 var ChoosePayer = require('./choose_payer');
 var SplitOptions = require('./split_options');
-var DatePicker= require('./date_picker');
+var DatePicker= require('../date_picker');
 
 var SessionStore = require('../../stores/session');
 var UserStore = require('../../stores/user');
@@ -218,7 +218,8 @@ AddABill = React.createClass({
           this.state.participants.map ( function( participant ) {
             return ( <li className="row" key={participant.id} >
                 <div
-                  className="participant-item col-md-offset-1 col-sm-offset-1 col-md-10 col-sm-10">
+                  className="participant-item col-md-offset-1 col-sm-offset-1 col-xs-offset-1
+                   col-md-10 col-sm-10 col-xs-10">
                     {participant.username}
                 </div>
               </li> );
@@ -228,12 +229,13 @@ AddABill = React.createClass({
     )
 
     return(
-          <div className="bill-form">
+      <div>
+          <div className="modal-body">
             <ParticipantsAutoComplete users={this.state.users} autoCallback={this._addParticipant} />
             <div className="row">
               <div
-                className="participant-header col-md-offset-1 col-sm-offset-1
-                col-md-10 col-sm-10">
+                className="participant-header col-md-offset-1 col-sm-offset-1 col-xs-offset-1
+                col-md-10 col-sm-10 col-xs-10">
                 Participants:
               </div>
             </div>
@@ -243,7 +245,8 @@ AddABill = React.createClass({
 
             <form className='new-bill' onSubmit={this.createBill}>
               <div className="row bill-description">
-                <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+                <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+                   col-md-10 col-sm-10 col-xs-10">
                   <span className="input-group-addon" id="basic-addon4">
                     <span className="glyphicon glyphicon-list" aria-hidden="true"></span>
                   </span>
@@ -256,7 +259,8 @@ AddABill = React.createClass({
               </div>
 
               <div className="row bill-amt">
-                <div className="input-group col-sm-offset-1 col-md-offset-1 col-md-10 col-sm-10">
+                <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+                   col-md-10 col-sm-10 col-xs-10">
                   <span className="input-group-addon" id="basic-addon5">
                     <span className="glyphicon glyphicon-usd" aria-hidden="true"></span>
                   </span>
@@ -279,9 +283,7 @@ AddABill = React.createClass({
                 onClick={this._toggleSubModal}>{this.state.splitType}</button>
             </div>
 
-            <button className="btn button-small" onClick={this._handleSave} data-dismiss="modal">
-              Save</button>
-            <button type="button" className="btn button-small" data-dismiss="modal">cancel</button>
+
 
             <article className="modal-content myModal-content col-sm-12 col-md-12" style={hiddenStyle} >
               <div>
@@ -294,6 +296,12 @@ AddABill = React.createClass({
               <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
             </article>
           </div>
+          <div className="modal-footer">
+            <button className="btn btn-default" onClick={this._handleSave} data-dismiss="modal">
+              Save</button>
+            <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+      </div>
     );
   }
 

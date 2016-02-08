@@ -5,7 +5,7 @@ var ApiUtil = require('../../util/api_util');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var ReceivePaymentAutoComplete = require('./receive_payment_auto_complete.jsx');
-var DatePicker= require('./date_picker');
+var DatePicker= require('../date_picker');
 
 var ChoosePayer = require('../add_a_bill/choose_payer');
 
@@ -14,12 +14,7 @@ var UserStore = require('../../stores/user');
 
 AddATransaction = React.createClass({
   mixins: [LinkedStateMixin],
-  _openModal: function () {
-    this.setState({modalIsOpen: true});
-  },
-  _closeModal: function () {
-    this.setState({modalIsOpen: false});
-  },
+
   _toggleSubModal: function (e) {
     e.preventDefault();
 
@@ -104,32 +99,38 @@ AddATransaction = React.createClass({
     }
 
     return(
-      <div id="add-a-transaction">
-        <section id="transaction-modal" className="modal fade">
-          <div id="myModal-container" className="row">
-              <article className="modal-content myModal-content col-sm-12 col-md-12">
-                <span className="modal-close" data-dismiss="modal">&times;</span>
-                You Will Pay:
-                <ReceivePaymentAutoComplete users={this.state.users} autoCallback={this._selectPerson} />
+      <div>
+        <div className="modal-body">
 
-                <form className='new-bill' onSubmit={this.createBill}>
-                  <label htmlFor='transaction-dollar-amt' className='add-bill-input-label'>Bill Amount</label>
-                  <input type='text' id='transaction-dollar-amt' className="add-bill-input"
-                    onChange={this._handleDollarAmt} onBlur={this._formatDollarAmt} value={this.state.dollar_amt} />
+            <ReceivePaymentAutoComplete users={this.state.users} autoCallback={this._selectPerson} />
 
-                  <br />
-                  <label htmlFor='transaction-date-picker' className="add-bill-input-label">Date</label>
-                  <DatePicker id='transaction-date-picker' dateCallback={this._handleDate}></DatePicker>
-                </form>
+            <form className='new-bill' onSubmit={this.createBill}>
+              <div className="row">
+                <div className="input-group col-sm-offset-1 col-md-offset-1 col-xs-offset-1
+                  col-md-10 col-sm-10 col-xs-10">
+                  <span className="input-group-addon" id="basic-addon5">
+                    <span className="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                  </span>
+                  <input type="text" className="form-control session-input"
+                    placeholder="Dollar Amount"
+                    aria-describedby="basic-addon1"
+                    onChange={this._handleDollarAmt}
+                    onBlur={this._formatDollarAmt}
+                    value={this.state.dollar_amt}
+                    />
+                </div>
+              </div>
 
-                <button className="btn button-small" onClick={this._handleSave} data-dismiss="modal">
-                  Save</button>
-                <button type="button" className="btn button-small" data-dismiss="modal">cancel</button>
-              </article>
+              <DatePicker id='transaction-date-picker' dateCallback={this._handleDate}></DatePicker>
+            </form>
 
-            </div>
+        </div>
 
-        </section>
+        <div className="modal-footer">
+          <button className="btn btn-default" onClick={this._handleSave} data-dismiss="modal">
+            Save</button>
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     );
   }

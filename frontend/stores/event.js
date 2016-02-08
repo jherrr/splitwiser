@@ -22,6 +22,7 @@ EventStore.__onDispatch = function (payload) {
       resetEvents(payload.events);
       EventStore.__emitChange();
       break;
+    
   }
 }
 

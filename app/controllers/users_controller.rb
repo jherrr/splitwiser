@@ -3,18 +3,21 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     if @user.save
       login_user!(@user)
-      redirect_to root_url
+
+      @output = {
+        authenticated: true,
+        username: @user.username,
+        id: @user.id
+      }
+
+      render json: @output
     else
       flash.now[:errors] = @user.errors.full_messages
-      render :new
+      render json: {authenticated: false}
     end
-  end
-
-  def new
-    @user = User.new
-    render :new
   end
 
   private
