@@ -46,19 +46,25 @@ var BalanceBook = React.createClass({
     return (
       <div id="balance-book" className="col-xs-12 col-md-12">
         <div className="row">
-          <div className="col-md-4 col-sm-4 balance-item">
+          <div className="col-md-3 col-sm-3 balance-item">
+            <p>
+              Hi {window.username}!
+            </p>
+          </div>
+
+          <div className="col-md-3 col-sm-3 balance-item balance-middle">
             <p>
               Balance:
               ${balance}
             </p>
           </div>
-          <div className="col-md-4 col-sm-4 balance-item balance-middle">
+          <div className="col-md-3 col-sm-3 balance-item balance-middle">
             <p>
               Lended Amount:
               ${lended_amt}
             </p>
           </div>
-          <div className="col-md-4 col-sm-4 balance-item">
+          <div className="col-md-3 col-sm-3 balance-item">
             <p>
               Owed Amount:
               ${owed_amt}
