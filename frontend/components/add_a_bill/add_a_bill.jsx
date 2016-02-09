@@ -278,24 +278,6 @@ AddABill = React.createClass({
               <DatePicker id='bill-date-picker' dateCallback={this._handleDate}></DatePicker>
             </form>
 
-            <div className='row'>
-              <label htmlFor='sub-modal-button'>Split: </label>
-              <button className="btn button-small" id="sub-modal-button"
-                onClick={this._toggleSubModal}>{this.state.splitType}</button>
-            </div>
-
-
-
-            <article className="modal-content myModal-content col-sm-12 col-md-12" style={hiddenStyle} >
-              <div>
-                <button type="button" className="button-split-type btn-primary">Equally</button>
-                <button type="button" className="button-split-type btn-primary">Percentage</button>
-                <button type="button" className="button-split-type btn-primary">Exact Amounts</button>
-              </div>
-              <SplitOptions participants={this.state.participants} dollar_amt={this.state.dollar_amt}
-                splitType={this.state.splitType} />
-              <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
-            </article>
           </div>
           <div className="modal-footer">
             <button className="btn btn-default" onClick={this._handleSave} data-dismiss="modal">
@@ -309,3 +291,20 @@ AddABill = React.createClass({
 });
 
 module.exports = AddABill;
+
+
+// <div className='row'>
+//   <label htmlFor='sub-modal-button'>Split: </label>
+//   <button className="btn button-small" id="sub-modal-button"
+//     onClick={this._toggleSubModal}>{this.state.splitType}</button>
+// </div>
+// <article className="modal-content myModal-content col-sm-12 col-md-12" style={hiddenStyle} >
+//   <div>
+//     <button type="button" className="button-split-type btn-primary">Equally</button>
+//     <button type="button" className="button-split-type btn-primary">Percentage</button>
+//     <button type="button" className="button-split-type btn-primary">Exact Amounts</button>
+//   </div>
+//   <SplitOptions participants={this.state.participants} dollar_amt={this.state.dollar_amt}
+//     splitType={this.state.splitType} />
+//   <ChoosePayer users={this.state.users} payerCallback={this._selectPayer} />
+// </article>

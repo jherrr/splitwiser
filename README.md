@@ -1,8 +1,24 @@
-# AllSet
+# AllSet!
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Heroku link][heroku]
 
 [heroku]: https://splitwiser.herokuapp.com/
+
+## Summary
+
+AllSet! is an application that keeps track of IOUs and payments between users.
+
+Add bills and checks, split the costs, and pay back you friends for outings, dinner
+groceries, or the movies. AllSet! keeps track of who owes what and divides up the bill
+for you!
+
+## Features
+
+* Ruby on Rails with PostgresQL provides user balances, friends list, and transaction history
+* React.js creates seamless transition between pages
+* BCrypt password hashing for password protection
+
+##Implementation Records
 
 ## Minimum Viable Product
 
