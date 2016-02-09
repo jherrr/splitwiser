@@ -1,6 +1,5 @@
 var React = require('react');
 
-var CurrentUserStore = require('../stores/current_user');
 var UserStore = require('../stores/user');
 var BalanceStore = require('../stores/balance');
 

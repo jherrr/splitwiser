@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var ApiUtil = require('../../util/api_util');
 
@@ -22,13 +23,17 @@ var EventIndex = React.createClass({
     this.indexListener.remove();
   },
   render: function() {
+    var userFilter = this.props.userFilter;
+
     var listItems = this.state.listItems.map(function (listItem, idx) {
-      if (listItem.objType === "event") {
-        return <EventItem key={idx} _event={listItem} />;
-      } else if (listItem.objType === "split") {
-        return <SplitItem key={idx} split={listItem} />;
-      } else if (listItem.objType === "transaction") {
-        return <TransactionItem key={idx} transaction={listItem}/>;
+      if (listItem.userFilter !== userFilter) {
+        if (listItem.objType === "event") {
+          return <EventItem key={idx} _event={listItem} />;
+        } else if (listItem.objType === "split") {
+          return <SplitItem key={idx} split={listItem} />;
+        } else if (listItem.objType === "transaction") {
+          return <TransactionItem key={idx} transaction={listItem}/>;
+        }
       }
     });
 
@@ -36,7 +41,12 @@ var EventIndex = React.createClass({
       <div className="col-md-12 index-container">
         <div className="row event-panel">
           <ul id="list-items">
-            {listItems}
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+                {listItems}
+            </ReactCSSTransitionGroup>
           </ul>
         </div>
       </div>

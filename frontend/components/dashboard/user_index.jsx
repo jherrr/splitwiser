@@ -9,6 +9,9 @@ var ApiUtil = require('../../util/api_util.js');
 var UserIndexItem = require('./user_index_item.jsx');
 
 var UserIndex = React.createClass({
+  _removeFilter: function () {
+    this.props.callback(-1);
+  },
   _onUserChange: function () {
     this.setState({users: UserStore.users()});
   },
@@ -40,14 +43,15 @@ var UserIndex = React.createClass({
       }
 
       if ( ((owes - lend) !== 0) && user.id != window.user_id ) {
-        listItems.push( <UserIndexItem key={user.id} owed={owes} lend={lend} user={user}/> );
+        listItems.push( <UserIndexItem key={user.id} owed={owes}
+           lend={lend} user={user} callback={this.props.callback}/> );
       }
     }.bind(this));
 
     return(
         <div className="index-container col-md-12 col-xs-12">
           <div className="row user-panel">
-            <div className="user-index-header">
+            <div className="user-index-header" onClick={this._removeFilter}>
                 <strong>
                   Friends
                 </strong>

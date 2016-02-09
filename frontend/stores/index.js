@@ -9,6 +9,7 @@ _splits = [];
 _transactions = [];
 
 IndexStore.all = function () {
+  debugger;
   var output = _merge(_events, _splits);
   output = _merge(output, _transactions);
 
@@ -19,6 +20,7 @@ var resetEvents = function(events) {
   _events = [];
   events.forEach( function ( _event ) {
     _event['objType'] = 'event';
+    _event['userFilter'] = null;
     _events.push(_event);
   });
 };
@@ -27,6 +29,13 @@ var resetTransactions = function(transactions) {
   _transactions = [];
   transactions.forEach( function ( transaction ) {
     transaction['objType'] = 'transaction';
+
+    if ( transaction.lender_id === window.user_id ) {
+      transaction['userFilter'] = transaction.borrower_id;
+    } else if ( transaction.borrower_id === window.user_id ) {
+      transaction['userFilter'] = transaction.lender_id;
+    }
+
     _transactions.push(transaction);
   });
 };
@@ -36,7 +45,17 @@ var resetSplits = function(splits) {
 
   splits.forEach( function ( split ) {
     split['objType'] = 'split';
-    _splits.push(split);
+
+    if ( split.event_owner_id === window.user_id ) {
+      split['userFilter'] = split.user_id
+    } else if ( split.user_id === window.user_id ) {
+      split['userFilter'] = split.event_owner_id
+    }
+
+    if ( !(split.event_owner_id === window.user_id && split.user_id === window.user_id) ) {
+      _splits.push(split);
+    }
+
   });
 
   _splits.sort( function( a, b ) {

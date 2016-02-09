@@ -113,8 +113,8 @@ AddABill = React.createClass({
 
     this.setState($.extend(blankAttrs, {splitData: splitData, equallyData: equallyData}));
   },
-  _selectPayer: function () {
-
+  _selectPayer: function ( payer ) {
+    this.setState({payer: payer} );
   },
   _handleDollarAmt: function (e) {
     this.setState({dollar_amt: e.target.value});
@@ -146,6 +146,7 @@ AddABill = React.createClass({
     eventData["dollar_amt"] = this.state.dollar_amt * 100;
     eventData["split_type"] = this.state.splitType;
     eventData["event_date"] = this.state.eventDate;
+    // eventData["payer"] = this.state.payer;
 
     var splitData = this.state.splitData;
 

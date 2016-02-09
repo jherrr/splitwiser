@@ -1,8 +1,5 @@
 var React = require('react');
 
-var EventStore = require('../../stores/event');
-var TransactionStore = require('../../stores/transaction');
-var EventSplitStore = require('../../stores/event_split');
 var UserStore = require('../../stores/user');
 var ApiUtil = require('../../util/api_util');
 
@@ -15,12 +12,15 @@ var EventIndex = require('../event_index/event_index');
 
 var DashBoard = React.createClass({
   getInitialState: function() {
-    return {};
+    return {userFilter: -1};
   },
   componentDidMount: function() {
     ApiUtil.fetchUsers();
     ApiUtil.fetchBalances(window.user_id);
     ApiUtil.fetchIndex(window.user_id);
+  },
+  _selectUser: function( userID ) {
+    this.setState({userFilter: userID});
   },
   render: function() {
     return (
@@ -35,12 +35,12 @@ var DashBoard = React.createClass({
               <div className="row stretch-height">
                 <div className="col-md-4">
                   <div className="row stretch-height">
-                    <UserIndex />
+                    <UserIndex callback={this._selectUser}/>
                   </div>
                 </div>
                 <div className="col-md-8">
                   <div className="row stretch-height">
-                    <EventIndex />
+                    <EventIndex userFilter={this.state.userFilter}/>
                   </div>
                 </div>
               </div>

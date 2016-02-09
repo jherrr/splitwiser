@@ -9,7 +9,7 @@ class Api::TransactionsController < ApplicationController
     id = params[:id]
 
     @transactions = Transaction.where("transactions.borrower_id = ?
-     OR transactions.lender_id = ?", id, id).includes(:lender, :borrower)
+     OR transactions.lender_id = ?", id, id).order(event_date: :desc).includes(:lender, :borrower)
 
     render 'show'
   end

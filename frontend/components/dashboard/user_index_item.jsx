@@ -1,10 +1,8 @@
 var React = require('react');
-var History = require('react-router').History;
 
 UserIndexListItem = React.createClass({
-  mixins: [History],
-  showDetail: function () {
-    this.history.pushState(null, '/user/' + this.props.user.id, {});
+  selectUser: function () {
+    this.props.callback(this.props.user.id)
   },
   render: function () {
     var userOwed = this.props.lend;
@@ -25,7 +23,7 @@ UserIndexListItem = React.createClass({
     }
 
     return(
-        <li onClick={this.showDetail} className="col-md-12 content list-group-item">
+        <li onClick={this.selectUser} className="col-md-12 content list-group-item">
           {output}
         </li>
     );

@@ -1,8 +1,4 @@
-var EventActions = require('../actions/event_actions');
-var EventSplitActions = require('../actions/event_split_actions');
 var UserActions = require('../actions/user_actions');
-var CurrentUserActions = require('../actions/current_user_actions');
-
 var BalanceActions = require('../actions/balance_actions');
 var SessionActions = require('../actions/session_actions');
 var IndexActions = require('../actions/index_actions');
@@ -184,7 +180,6 @@ ApiUtil = {
     });
   },
   createNewUser: function ( data, callback ) {
-    debugger;
 
     $.ajax({
       url: "users",

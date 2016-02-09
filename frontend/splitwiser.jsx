@@ -11,25 +11,14 @@ var ApiUtil = require('./util/api_util');
 var DashBoard = require('./components/dashboard/dashboard');
 var SessionForm = require('./components/session/session_form');
 
-var TransactionIndex = require('./components/transaction_index');
-
-var EventStore = require('./stores/event');
-var TransactionStore = require('./stores/transaction');
-var EventSplitStore = require('./stores/event_split');
 var UserStore = require('./stores/user');
-var CurrentUserStore = require('./stores/current_user');
 var SessionStore = require('./stores/session');
-
-var AppConstants = require('./constants/app_constants');
 
 var BillModal = require('./components/add_a_bill/bill_modal');
 var TransactionModal = require('./components/add_a_transaction/transaction_modal');
 var HomePage = require('./components/session/home_page');
 
 var App = React.createClass({
-  getInitialState: function() {
-    return {viewType: AppConstants.ALL_EXPENSES};
-  },
   render: function(){
     return (
       <div id="app">
@@ -49,7 +38,6 @@ var preventIfLoggedIn = function (nextState, replaceState) {
   }
 };
 
-
 var routes = (
   <Router >
     <Route path="/">
@@ -65,11 +53,7 @@ var routes = (
 window.SessionStore = SessionStore;
 window.BalanceStore = require('./stores/balance');
 window.IndexStore = require('./stores/index');
-window.EventSplitStore = EventSplitStore;
-window.EventStore = EventStore;
-window.TransactionStore = TransactionStore;
 window.ApiUtil = ApiUtil;
 window.UserStore = UserStore;
-window.CurrentUserStore = CurrentUserStore;
 
 ReactDOM.render(<Router>{routes}</Router>, root);

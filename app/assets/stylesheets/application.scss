@@ -97,6 +97,16 @@
     box-shadow: 5px 5px 5px #888888;
   }
 
+  .list-group-item.content {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+
+  .list-group-item.content:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
   #balance-book {
     border-bottom: solid;
     border-right: solid;
@@ -302,6 +312,11 @@
   border-width: 1px;
   border-color: rgb(112, 219, 112);
   box-shadow: 5px 5px 5px #888888;
+}
+
+.user-index-header:hover {
+  background-color: #95cd7e;
+  cursor: pointer;
 }
 
 .login-overlay{
