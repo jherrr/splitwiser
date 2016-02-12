@@ -11,7 +11,13 @@ var TransactionItem = require('./transaction_item');
 
 var EventIndex = React.createClass({
   _indexChanged: function() {
-    this.setState({listItems: IndexStore.all()});
+    
+    var type = this.props.eventIndex
+    if (type.type === "all") {
+      this.setState({listItems: IndexStore.all()});
+    } else if (type.type === "user") {
+      this.setState({listItems:IndexStore.userAll()});
+    }
   },
   getInitialState: function() {
     return {listItems: []};
@@ -23,19 +29,21 @@ var EventIndex = React.createClass({
     this.indexListener.remove();
   },
   render: function() {
-    var userFilter = this.props.userFilter;
-
-    var listItems = this.state.listItems.map(function (listItem, idx) {
-      if (listItem.userFilter !== userFilter) {
-        if (listItem.objType === "event") {
-          return <EventItem key={idx} _event={listItem} />;
-        } else if (listItem.objType === "split") {
-          return <SplitItem key={idx} split={listItem} />;
-        } else if (listItem.objType === "transaction") {
-          return <TransactionItem key={idx} transaction={listItem}/>;
-        }
+    var key;
+    var listItems = this.state.listItems.map(function (listItem) {
+      if (listItem.objType === "event") {
+        key = "e" + listItem.event_id;
+        return <EventItem key={key} _event={listItem} />;
+      } else if (listItem.objType === "split") {
+        key = "s" + listItem.split_id
+        return <SplitItem key={key} split={listItem} />;
+      } else if (listItem.objType === "transaction") {
+        key = "t" + listItem.transaction_id
+        return <TransactionItem key={key} transaction={listItem}/>;
       }
     });
+
+
 
     return(
       <div className="col-md-12 index-container">

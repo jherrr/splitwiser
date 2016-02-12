@@ -10,7 +10,7 @@ var UserIndexItem = require('./user_index_item.jsx');
 
 var UserIndex = React.createClass({
   _removeFilter: function () {
-    this.props.callback(-1);
+    this.props.callback({type: "all"});
   },
   _onUserChange: function () {
     this.setState({users: UserStore.users()});
@@ -53,7 +53,7 @@ var UserIndex = React.createClass({
           <div className="row user-panel">
             <div className="user-index-header" onClick={this._removeFilter}>
                 <strong>
-                  Friends
+                  All Friends
                 </strong>
             </div>
             <ul className="list-group">

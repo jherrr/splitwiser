@@ -10,6 +10,24 @@ class Api::EventSplitsController < ApplicationController
     render 'index'
   end
 
+  def show_between
+    from_id = params[:from_id].to_i
+    to_id = params[:to_id].to_i
+
+    @event_splits = []
+
+    splits = EventSplit.where(user_id: to_id).includes(:lender).includes(:event)
+    splits.each do |split|
+      lender = split.lender
+      if lender.id == from_id
+        @event_splits.push(split)
+
+      end
+    end
+
+    render 'show'
+  end
+
   def show
     user_id = params[:id]
 

@@ -1,8 +1,9 @@
 var React = require('react');
+var ApiUtil = require('../../util/api_util')
 
 UserIndexListItem = React.createClass({
   selectUser: function () {
-    this.props.callback(this.props.user.id)
+    this.props.callback({type: "user", id: this.props.user.id})
   },
   render: function () {
     var userOwed = this.props.lend;

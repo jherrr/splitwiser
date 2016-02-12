@@ -14,6 +14,16 @@ class Api::TransactionsController < ApplicationController
     render 'show'
   end
 
+  def show_between
+    from_id = params[:from_id]
+    to_id = params[:to_id]
+
+    @transactions = Transaction.where(borrower_id: to_id)
+      .where(lender_id: from_id).includes(:lender, :borrower)
+
+    render 'show'
+  end
+
   def create
     lender_id = params[:personToBePaid][:id]
     borrower_id = params[:payer][:id]

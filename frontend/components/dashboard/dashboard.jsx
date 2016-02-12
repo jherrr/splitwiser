@@ -12,15 +12,22 @@ var EventIndex = require('../event_index/event_index');
 
 var DashBoard = React.createClass({
   getInitialState: function() {
-    return {userFilter: -1};
+    return {eventIndex: {type: "all"}};
   },
   componentDidMount: function() {
     ApiUtil.fetchUsers();
     ApiUtil.fetchBalances(window.user_id);
-    ApiUtil.fetchIndex(window.user_id);
+    ApiUtil.fetchAllIndex(window.user_id);
   },
-  _selectUser: function( userID ) {
-    this.setState({userFilter: userID});
+  _selectUser: function( eventIndex ) {
+
+    if (eventIndex.type === "all") {
+      ApiUtil.fetchAllIndex(window.user_id);
+    } else if (eventIndex.type === "user") {
+      ApiUtil.fetchUserIndex(window.user_id, eventIndex.id);
+    }
+
+    this.setState({eventIndex: eventIndex});
   },
   render: function() {
     return (
@@ -40,7 +47,7 @@ var DashBoard = React.createClass({
                 </div>
                 <div className="col-md-8">
                   <div className="row stretch-height">
-                    <EventIndex userFilter={this.state.userFilter}/>
+                    <EventIndex eventIndex={this.state.eventIndex}/>
                   </div>
                 </div>
               </div>

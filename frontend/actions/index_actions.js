@@ -37,6 +37,23 @@ var IndexActions = {
       actionType: IndexConstants.NEW_TRANSACTION_RECEIVED,
       transaction: transaction
     })
+  },
+  addUserTransactions: function (transactions) {
+    Dispatcher.dispatch({
+      actionType: IndexConstants.USER_TRANSACTIONS_RECEIVED,
+      transactions: transactions
+    });
+  },
+  addUserSplits: function (splits) {
+    Dispatcher.dispatch({
+      actionType: IndexConstants.USER_SPLITS_RECEIVED,
+      splits: splits
+    });
+  },
+  resetUserIndex: function (splits) {
+    Dispatcher.dispatch({
+      actionType: IndexConstants.RESET_USER_INDEX
+    });
   }
 };
 

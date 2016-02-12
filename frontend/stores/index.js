@@ -8,8 +8,43 @@ _events = [];
 _splits = [];
 _transactions = [];
 
+_userSplits = [];
+_userTransactions = [];
+
+resetUserIndex = function () {
+  _userSplits = [];
+  _userTransactions = [];
+};
+
+addUserTransactions = function (transactions) {
+  transactions.forEach( function(transaction) {
+    transaction["objType"] = "transaction";
+    _userTransactions.push(transaction);
+  })
+};
+
+addUserSplits = function (splits) {
+  splits.forEach( function ( split ) {
+    split['objType'] = 'split';
+
+    if ( !(split.event_owner_id === window.user_id && split.user_id === window.user_id) ) {
+      _userSplits.push(split);
+    }
+  });
+};
+
+IndexStore.userAll = function () {
+  
+  var output = _userSplits.concat(_userTransactions).sort( function( a, b ) {
+    return new Date(b.event_date).getTime()
+      - new Date(a.event_date).getTime();
+  });
+
+  return output;
+};
+
 IndexStore.all = function () {
-  debugger;
+
   var output = _merge(_events, _splits);
   output = _merge(output, _transactions);
 
@@ -20,7 +55,6 @@ var resetEvents = function(events) {
   _events = [];
   events.forEach( function ( _event ) {
     _event['objType'] = 'event';
-    _event['userFilter'] = null;
     _events.push(_event);
   });
 };
@@ -29,13 +63,6 @@ var resetTransactions = function(transactions) {
   _transactions = [];
   transactions.forEach( function ( transaction ) {
     transaction['objType'] = 'transaction';
-
-    if ( transaction.lender_id === window.user_id ) {
-      transaction['userFilter'] = transaction.borrower_id;
-    } else if ( transaction.borrower_id === window.user_id ) {
-      transaction['userFilter'] = transaction.lender_id;
-    }
-
     _transactions.push(transaction);
   });
 };
@@ -45,12 +72,6 @@ var resetSplits = function(splits) {
 
   splits.forEach( function ( split ) {
     split['objType'] = 'split';
-
-    if ( split.event_owner_id === window.user_id ) {
-      split['userFilter'] = split.user_id
-    } else if ( split.user_id === window.user_id ) {
-      split['userFilter'] = split.event_owner_id
-    }
 
     if ( !(split.event_owner_id === window.user_id && split.user_id === window.user_id) ) {
       _splits.push(split);
@@ -67,6 +88,7 @@ var resetSplits = function(splits) {
 var addNewEvent = function(_event) {
   var newDate = _event.event_date;
   _event.objType = "event";
+  _event['new'] = true;
 
   var idx = 0;
   while ( compareDates(_events[idx].event_date, newDate) > 0 ) {
@@ -93,6 +115,7 @@ var addNewEvent = function(_event) {
 var addNewTransaction = function( transaction ) {
   var newDate = transaction.event_date;
   transaction.objType = "transaction";
+  transaction['new'] = true;
 
   var idx = 0;
   while ( compareDates(_events[idx].event_date, newDate) > 0 ) {
@@ -132,7 +155,7 @@ var _merge = function (arr1, arr2) {
 };
 
 IndexStore.__onDispatch = function (payload) {
-  debugger;
+
 
   switch(payload.actionType) {
     case IndexConstants.EVENTS_RECEIVED:
@@ -155,6 +178,19 @@ IndexStore.__onDispatch = function (payload) {
       addNewTransaction(payload.transaction);
       IndexStore.__emitChange();
       break;
+    case IndexConstants.USER_TRANSACTIONS_RECEIVED:
+      addUserTransactions(payload.transactions);
+      IndexStore.__emitChange();
+      break;
+    case IndexConstants.USER_SPLITS_RECEIVED:
+      addUserSplits(payload.splits);
+      IndexStore.__emitChange();
+      break;
+    case IndexConstants.RESET_USER_INDEX:
+      resetUserIndex();
+      IndexStore.__emitChange();
+      break;
+
     /* I actually don't think I need to add the splits of a new event*/
     // case IndexConstants.NEW_SPLITS_RECEIVED:
     //   addNewSplits(payload.splits);

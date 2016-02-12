@@ -110,3 +110,9 @@ Bootstrap and css. Transitions. I'm not really sure what else at this point.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+
+
+## Future Features
+
+Percentage, and Exact Amounts splitting
+Payer Autocomplete + Controller Logic

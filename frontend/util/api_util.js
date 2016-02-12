@@ -144,7 +144,7 @@ ApiUtil = {
       }
     })
   },
-  fetchIndex: function ( user_id ) {
+  fetchAllIndex: function ( user_id ) {
     $.ajax({
       url: "api/events/" + user_id,
       success: function (events) {
@@ -167,13 +167,49 @@ ApiUtil = {
       }
     });
   },
+  fetchUserIndex: function ( current_id, associate_id ) {
+    IndexActions.resetUserIndex();
+
+    $.ajax({
+      url: "api/event_splits/" + current_id + "/" + associate_id,
+      success: function (eventSplits) {
+
+        IndexActions.addUserSplits(eventSplits);
+      }
+    });
+
+    $.ajax({
+      url: "api/event_splits/" + associate_id + "/" + current_id,
+      success: function (eventSplits) {
+
+        IndexActions.addUserSplits(eventSplits);
+      }
+    });
+
+    $.ajax({
+      url: "api/transactions/" + current_id + "/" + associate_id,
+      success: function (transactions) {
+
+        IndexActions.addUserTransactions(transactions);
+      }
+    });
+
+    $.ajax({
+      url: "api/transactions/" + associate_id + "/" + current_id,
+      success: function (transactions) {
+        
+        IndexActions.addUserTransactions(transactions);
+      }
+    });
+
+  },
   createNewTransaction: function ( data ) {
     $.ajax({
       url: "api/transactions",
       method: "POST",
       data: data,
       success: function ( transactionData ) {
-        debugger;
+
         BalanceActions.receiveUpdatedBalances( transactionData.balances );
         IndexActions.receiveNewTransaction( transactionData.transaction );
       }
