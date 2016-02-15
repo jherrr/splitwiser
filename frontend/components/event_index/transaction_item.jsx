@@ -9,11 +9,14 @@ TransactionItem = React.createClass({
 
     if (transaction['new']) {
 
-      var $el = $("#t" + transaction.id), timeOut = 5000, originalColor = $el.css("background");
+      var $el = $("#t" + transaction.id);
+      var timeOut = 5000;
+      var originalColor = $el.css("background");
+      var origFontColor = $el.css("color");
 
-      $el.css("background", "rgba(191,191,191,0.9)");
+      $el.css("background", "rgba(191,191,191,0.9)").css("color", "white");
       setTimeout(function(){
-        $el.css("background", originalColor);
+        $el.css("background", originalColor).css("color", origFontColor);
       }, timeOut );
     }
 
